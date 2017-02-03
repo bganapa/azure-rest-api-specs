@@ -15,15 +15,14 @@
     "generated_relative_base_directory": "*client"
   },
   "projects": {
-    "authorization": {
-      "swagger": "arm-authorization/2015-07-01/swagger/authorization.json",
+    "compute": {
+      "swagger": "arm-compute/2015-06-15/swagger/compute.json",
       "autorest_options": {
-        "Namespace" : "azure.mgmt.authorization"
+        "Namespace": "azure.mgmt.compute",
+        "Modeler": "CompositeSwagger",
+        "PackageVersion": "0.32.1"
       },
-      "output_dir": "azure-mgmt-authorization/azure/mgmt/authorization",
-      "wrapper_filesOrDirs": [
-        "myfile.py"
-      ],
+      "output_dir": "azure-mgmt-compute/azure/mgmt/computestack"
     },
   }
 }
