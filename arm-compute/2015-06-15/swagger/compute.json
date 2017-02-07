@@ -3324,7 +3324,7 @@
         "diskSizeGB": {
           "type": "integer",
           "format": "int32",
-          "description": "Gets or sets the initial disk size in GB for blank data disks, and the new desired size for existing OS and Data disks."
+          "description": "The initial disk size in GB for blank data disks, and the new desired size for existing OS and Data disks."
         }
       },
       "required": [
@@ -3927,7 +3927,7 @@
           "items": {
             "type": "string"
           },
-          "description": "Gets or sets the list of virtual hard disk container uris."
+          "description": "The list of virtual hard disk container uris."
         }
       },
       "required": [
@@ -4287,7 +4287,7 @@
           "items": {
             "$ref": "#/definitions/VirtualMachineScaleSet"
           },
-          "description": "Gets or sets the list of virtual machine scale sets."
+          "description": "The list of virtual machine scale sets."
         }
       },
       "description": "The List Virtual Machine operation response."
