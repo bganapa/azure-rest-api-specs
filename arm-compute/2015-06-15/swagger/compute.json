@@ -3217,6 +3217,32 @@
       },
       "description": "Describes the uri of a disk."
     },
+    "Caching": {
+      "type": "string",
+      "description": "The caching type.",
+      "enum": [
+        "None",
+        "ReadOnly",
+        "ReadWrite"
+      ],
+      "x-ms-enum": {
+        "name": "CachingTypes",
+        "modelAsString": false
+      }
+    },
+    "CreateOption": {
+      "type": "string",
+      "description": "The create option.",
+      "enum": [
+        "fromImage",
+        "empty",
+        "attach"
+      ],
+      "x-ms-enum": {
+        "name": "DiskCreateOptionTypes",
+        "modelAsString": false
+      }
+    },
     "OSDisk": {
       "properties": {
         "osType": {
@@ -3248,35 +3274,17 @@
           "description": "The source user image virtual hard disk. The virtual hard disk will be copied before using it to attach to the virtual machine. If SourceImage is provided, the destination virtual hard disk must not exist."
         },
         "caching": {
-          "type": "string",
-          "description": "Gets or sets the caching type.",
-          "enum": [
-            "None",
-            "ReadOnly",
-            "ReadWrite"
-          ],
-          "x-ms-enum": {
-            "name": "CachingTypes",
-            "modelAsString": false
-          }
+          "$ref": "#/definitions/Caching",
+          "description": "The caching type."
         },
         "createOption": {
-          "type": "string",
-          "description": "Gets or sets the create option.",
-          "enum": [
-            "fromImage",
-            "empty",
-            "attach"
-          ],
-          "x-ms-enum": {
-            "name": "DiskCreateOptionTypes",
-            "modelAsString": false
-          }
+          "$ref": "#/definitions/CreateOption",
+          "description": "The create option."
         },
         "diskSizeGB": {
           "type": "integer",
           "format": "int32",
-          "description": "Gets or sets the initial disk size in GB for blank data disks, and the new desired size for existing OS and Data disks."
+          "description": "The initial disk size, in GB, for blank data disks, and the new desired size for resizing existing OS and data disks."
         }
       },
       "required": [
@@ -3306,30 +3314,12 @@
           "description": "The source user image virtual hard disk. This virtual hard disk will be copied before using it to attach to the virtual machine. If SourceImage is provided, the destination virtual hard disk must not exist."
         },
         "caching": {
-          "type": "string",
-          "description": "Gets or sets the caching type.",
-          "enum": [
-            "None",
-            "ReadOnly",
-            "ReadWrite"
-          ],
-          "x-ms-enum": {
-            "name": "CachingTypes",
-            "modelAsString": false
-          }
+          "$ref": "#/definitions/Caching",
+          "description": "The caching type."
         },
         "createOption": {
-          "type": "string",
-          "description": "Gets or sets the create option.",
-          "enum": [
-            "fromImage",
-            "empty",
-            "attach"
-          ],
-          "x-ms-enum": {
-            "name": "DiskCreateOptionTypes",
-            "modelAsString": false
-          }
+          "$ref": "#/definitions/CreateOption",
+          "description": "The create option."
         },
         "diskSizeGB": {
           "type": "integer",
@@ -3909,30 +3899,12 @@
           "description": "The disk name."
         },
         "caching": {
-          "type": "string",
-          "description": "The caching type.",
-          "enum": [
-            "None",
-            "ReadOnly",
-            "ReadWrite"
-          ],
-          "x-ms-enum": {
-            "name": "CachingTypes",
-            "modelAsString": false
-          }
+          "$ref": "#/definitions/Caching",
+          "description": "The caching type."
         },
         "createOption": {
-          "type": "string",
-          "description": "Gets or sets the create option.",
-          "enum": [
-            "fromImage",
-            "empty",
-            "attach"
-          ],
-          "x-ms-enum": {
-            "name": "DiskCreateOptionTypes",
-            "modelAsString": false
-          }
+          "$ref": "#/definitions/CreateOption",
+          "description": "The create option."
         },
         "osType": {
           "type": "string",
@@ -4400,7 +4372,7 @@
           "items": {
             "$ref": "#/definitions/VirtualMachineScaleSetSku"
           },
-          "description": "Gets the list of skus available for the virtual machine scale set."
+          "description": "The list of skus available for the virtual machine scale set."
         }
       },
       "description": "The Virtual Machine Scale Set List Skus operation response."
