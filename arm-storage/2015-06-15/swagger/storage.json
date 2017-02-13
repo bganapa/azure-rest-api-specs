@@ -3,7 +3,7 @@
   "info": {
     "title": "StorageManagement",
     "description": "The Azure Storage Management API.",
-    "version": "2015-06-15"
+    "version": "2015-06-15",
     "x-ms-code-generation-settings": {
       "name": "StorageManagementClient"
     }
@@ -420,7 +420,8 @@
       },
       "required": [
         "name"
-      ]
+      ],
+      "description": "The parameters used to check the availabity of the storage account name."
     },
     "CheckNameAvailabilityResult": {
       "properties": {
@@ -467,7 +468,8 @@
       },
       "required": [
         "accountType"
-      ]
+      ],
+      "description": "The parameters used to create the storage account."
     },
     "StorageAccountCreateParameters": {
       "properties": {
@@ -614,7 +616,8 @@
           "$ref": "#/definitions/Endpoints",
           "description": "Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object from the secondary location of the storage account. Only available if the SKU name is Standard_RAGRS."
         }
-      }
+      },
+      "description": "Properties of the storage account."
     },
     "StorageAccount": {
       "properties": {
@@ -676,7 +679,8 @@
           "$ref": "#/definitions/CustomDomain",
           "description": "User domain assigned to the storage account. Name is the CNAME source. Only one custom domain is supported per storage account at this time. To clear the existing custom domain, use an empty string for the custom domain name property."
         }
-      }
+      },
+      "description": "The parameters used when updating a storage account."
     },
     "StorageAccountUpdateParameters": {
       "properties": {
@@ -703,7 +707,8 @@
       },
       "required": [
         "keyName"
-      ]
+      ],
+      "description": "The parameters used to regenerate the storage account key."
     },
     "UsageName": {
       "properties": {
@@ -800,7 +805,8 @@
           "description": "Resource tags"
         }
       },
-      "x-ms-azure-resource": true
+      "x-ms-azure-resource": true,
+      "description": "Describes a storage resource."
     }
   },
   "parameters": {
