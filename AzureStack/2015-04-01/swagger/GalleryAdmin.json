@@ -60,7 +60,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/ResourceDefinition"
+                "$ref": "#/definitions/GalleryItemResource"
               }
             }
           }
@@ -99,15 +99,15 @@
         ],
         "responses": {
           "200": {
-            "description": "OK, when the gallery item already exists and trying to upload the same item returns this response",
+            "description": "OK, when the gallery item already exists and trying to upload the same item returns this response.",
             "schema": {
-              "$ref": "#/definitions/ResourceDefinition"
+              "$ref": "#/definitions/GalleryItemResource"
             }
           },
           "201": {
-            "description": "Created, When a new gallery item is uploaded, this response is returned",
+            "description": "Created, When a new gallery item is uploaded, this response is returned.",
             "schema": {
-              "$ref": "#/definitions/ResourceDefinition"
+              "$ref": "#/definitions/GalleryItemResource"
             }
           }
         }
@@ -144,7 +144,7 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/ResourceDefinition"
+              "$ref": "#/definitions/GalleryItemResource"
             }
           }
         }
@@ -174,177 +174,10 @@
         ],
         "responses": {
           "204": {
-            "description": "No Content, This response is returned when the provided gallery item does not exist"
+            "description": "No Content, This response is returned when the provided gallery item does not exist."
           },
           "200": {
-            "description": "OK, This response is returned when the provided gallery item is successfully deleted"
-          }
-        }
-      }
-    },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.gallery.providers/galleryItems/{galleryItemName}": {
-      "get": {
-        "tags": [
-          "ProviderGalleryRegistrations"
-        ],
-        "description": "Gets a specific gallery registration",
-        "operationId": "ProviderGalleryRegistrations_Get",
-        "consumes": [],
-        "produces": [
-          "application/json",
-          "text/json"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/parameters/ApiVersionParameter"
-          },
-          {
-            "$ref": "#/parameters/SubscriptionIdParameter"
-          },
-          {
-            "$ref": "#/parameters/resourceGroupNameParameter"
-          },
-          {
-            "name": "galleryItemName",
-            "in": "path",
-            "description": "Identity of the gallery item. Includes publisher name, item name and may include version separated by period character.",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "#/definitions/ResourceDefinition"
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "ProviderGalleryRegistrations"
-        ],
-        "description": "Uploads a provider gallery item to the storage",
-        "operationId": "ProviderGalleryRegistrations_CreateOrUpdate",
-        "consumes": [],
-        "produces": [
-          "application/json",
-          "text/json"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/parameters/ApiVersionParameter"
-          },
-          {
-            "$ref": "#/parameters/SubscriptionIdParameter"
-          },
-          {
-            "$ref": "#/parameters/resourceGroupNameParameter"
-          },
-          {
-            "name": "galleryItemName",
-            "in": "path",
-            "description": "Identity of the gallery item. Includes publisher name, item name and may include version separated by period character.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "registrationResourceDefinition",
-            "in": "body",
-            "description": "Resource definition of the gallery item.",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/ResourceDefinition"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK, This response is returned when the provided registration already exists",
-            "schema": {
-              "$ref": "#/definitions/ResourceDefinition"
-            }
-          },
-          "201": {
-            "description": "Created, This response is returned when new registration is provided",
-            "schema": {
-              "$ref": "#/definitions/ResourceDefinition"
-            }
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "ProviderGalleryRegistrations"
-        ],
-        "description": "Deletes a specific gallery registration",
-        "operationId": "ProviderGalleryRegistrations_Delete",
-        "consumes": [],
-        "produces": [
-          "application/json",
-          "text/json"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/parameters/ApiVersionParameter"
-          },
-          {
-            "$ref": "#/parameters/SubscriptionIdParameter"
-          },
-          {
-            "$ref": "#/parameters/resourceGroupNameParameter"
-          },
-          {
-            "name": "galleryItemName",
-            "in": "path",
-            "description": "Identity of the gallery item. Includes publisher name, item name and may include version separated by period character.",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content, This response is returned when the provided gallery registration does not exist"
-          },
-          "200": {
-            "description": "OK, This response is returned when the provided gallery registration is successfully deleted"
-          }
-        }
-      }
-    },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.gallery.providers/galleryItems": {
-      "get": {
-        "tags": [
-          "ProviderGalleryRegistrations"
-        ],
-        "description": "Lists gallery registrations",
-        "operationId": "ProviderGalleryRegistrations_List",
-        "consumes": [],
-        "produces": [
-          "application/json",
-          "text/json"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/parameters/ApiVersionParameter"
-          },
-          {
-            "$ref": "#/parameters/SubscriptionIdParameter"
-          },
-          {
-            "$ref": "#/parameters/resourceGroupNameParameter"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/ResourceDefinition"
-              }
-            }
+            "description": "OK, This response is returned when the provided gallery item is successfully deleted."
           }
         }
       }
@@ -352,124 +185,542 @@
   },
   "definitions": {
      "GalleryItemUriPayload": {
-      "description": "Gallery item URI, Points to the http or https uri where the gallery package is located, typically a blob uri",
+      "description": "Gallery item URI, Points to the http or https uri where the gallery package is located, typically a blob uri.",
       "type": "object",
       "properties": {
         "GalleryItemUri": {
-          "description": "The gallery item URI.",
+          "description": "Gets or sets the gallery item URI.",
           "type": "string"
+        }
+      }
+    },
+    "GalleryItem": {
+      "type": "object",
+      "description": "Gallery item display information.",
+      "properties": {
+        "identity": {
+          "type": "string",
+          "description": "Idenitity of the gallery item."
+        },
+        "publisher": {
+          "type": "string",
+          "description": "Publisher name."
+        },
+        "publisherDisplayName": {
+          "type": "string",
+          "description": "Publisher display name."
+        },
+        "itemName": {
+          "type": "string",
+          "description": "Name of the gallery item."
+        },
+        "itemDisplayName": {
+          "type": "string",
+          "description": "Display name of the gallery item."
+        },
+        "version": {
+          "type": "string",
+          "description": "Version of the gallery item."
+        },
+        "summary": {
+          "type": "string",
+          "description": "Summary of the gallery item."
+        },
+        "longSummary": {
+          "type": "string",
+          "description": "Long summary of the gallery item."
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the gallery item."
+        },
+        "uiDefinitionUri": {
+          "type": "string",
+          "description": "URI pointing to the UI definition json file of the gallery item."
+        },
+        "createdTime": {
+          "format": "date-time",
+          "type": "string",
+          "description": "Gallery item creation time."
+        },
+        "changedTime": {
+          "format": "date-time",
+          "type": "string",
+          "description": "Last modified time of the gallery item."
+        },
+        "marketingMaterial": {
+          "$ref": "#/definitions/MarketingMaterial",
+          "description": "Gallery item marketing material."
+        },
+        "itemType": {
+          "type": "string",
+          "description": "Gallery item menu reference type, This could be either 'GalleryItem' or 'ItemGroup'.",
+          "enum": [
+            "GalleryItem",
+            "ItemGroup"
+          ],
+          "x-ms-enum":{
+            "name": "ItemType",
+            "modelAsString": false
+          }
+        },
+        "categoryIds": {
+          "type": "array",
+          "description": "The list of category IDs that this gallery item belogs to.",
+          "items": {
+            "type": "string"
+          },
+          "readOnly": true
+        },
+        "screenshotUris": {
+          "type": "array",
+          "description": "The list of screenshot URIs provided for the gallery item.",
+          "items": {
+            "type": "string"
+          },
+          "readOnly": true
+        },
+        "links": {
+          "type": "array",
+          "description": "The list of links provided for the gallery item.",
+          "items": {
+            "$ref": "#/definitions/LinkProperties"
+          },
+          "readOnly": true
+        },
+        "filters": {
+          "type": "array",
+          "description": "The list of filters for the gallery item.",
+          "items": {
+            "$ref": "#/definitions/Filter"
+          },
+          "readOnly": true
+        },
+        "iconFileUris": {
+          "type": "object",
+          "description": "Dictionary of icon image URIs by icon type. Icon type could be one of the following values: Small, Medium, Large, Wide, Hero.",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "readOnly": true
+        },
+        "artifacts": {
+          "type": "array",
+          "description": "The list of articats.",
+          "items": {
+            "$ref": "#/definitions/Artifact"
+          },
+          "readOnly": true
+        },
+        "metadata": {
+          "type": "array",
+          "description": "Custom item metadata.",
+          "$ref": "#/definitions/OpenProperty",
+          "readOnly": true
+        },
+        "properties": {
+          "type": "object",
+          "description": "The list of properties provided for the gallery item.",
+            "additionalProperties": {
+            "type": "string"
+          },
+          "readOnly": true
+        },
+        "images": {
+          "type": "array",
+          "description": "The list of images.",
+          "items": {
+            "$ref": "#/definitions/ImageGroup"
+          },
+          "readOnly": true
+        },
+        "products": {
+          "type": "array",
+          "description": "The list of products.",
+          "items": {
+            "$ref": "#/definitions/Product"
+          },
+          "readOnly": true
+        },
+        "resourceGroupName": {
+          "type": "string",
+          "description": "The resource group name the galery item belongs to."
+        },
+        "definitionTemplates": {
+          "$ref": "#/definitions/DefinitionTemplates",
+          "description": "Deployment template file defintion.",
+          "readOnly": true
+        },
+        "additionalProperties": {
+          "type": "object",
+          "description": "Dictionary of additional properties provided for the item.",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "readOnly": true
+        }
+      }
+    },
+    "MarketingMaterial": {
+      "type": "object",
+      "description": "Marketing material property definition.",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "URL path to the marketing site."
+        }
+      }
+    },
+    "LinkProperties": {
+      "type": "object",
+      "description": "Linked gallery item read from the gallery item package.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "ID of the link."
+        },
+        "displayName": {
+          "type": "string",
+          "description": "The display name of the link."
+        },
+        "uri": {
+          "type": "string",
+          "description": "URI of the link."
+        }
+      }
+    },
+    "Filter": {
+      "type": "object",
+      "description": "Filter item properties definition.",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Filter type."
+        },
+        "value": {
+          "type": "string",
+          "description": "Filter value."
+        }
+      }
+    },
+    "Artifact": {
+      "type": "object",
+      "description": "Gallery artifact properties definition.",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the artifact."
+        },
+        "uri": {
+          "type": "string",
+          "description": "URI of the artifact."
+        },
+        "type": {
+          "enum": [
+            "template",
+            "fragment",
+            "custom",
+            "metadata"
+          ],
+          "type": "string",
+          "x-ms-enum":{
+            "name": "Type",
+            "modelAsString": false
+          }
+        }
+      }
+    },
+    "OpenProperty": {
+      "type": "object",
+      "description": "Dynamic properties definition.",
+      "properties": {
+        "properties": {
+          "type": "object",
+          "description": "Dynamic properties.",
+          "additionalProperties": {
+            "type": "object"
+          },
+          "readOnly": true
+        }
+      }
+    },
+    "ImageGroup": {
+      "type": "object",
+      "description": "Group of images for the gallery item.",
+      "properties": {
+        "context": {
+          "description": "The image context.",
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "description": "The list of image objects.",
+          "items": {
+            "$ref": "#/definitions/Image"
+          },
+          "readOnly": true
+        }
+      }
+    },
+    "Product": {
+      "type": "object",
+      "description": "Product item read from the gallery item package.",
+      "properties": {
+        "displayName": {
+          "type": "string",
+          "description": "Diplay name of the product."
+        },
+        "publisherDisplayName": {
+          "type": "string",
+          "description": "Publisher display name of the product."
+        },
+        "pricingDetailsUri": {
+          "type": "string",
+          "description": "Pricing details URI of the product."
+        },
+        "offerDetails": {
+          "$ref": "#/definitions/OfferDetails",
+          "description": "Offer details of the product."
+        },
+        "legalTerms": {
+          "type": "string",
+          "description": "Legal terms of the product."
+        },
+        "privacyPolicy": {
+          "type": "string",
+          "description": "Privacy policy of the product."
+        },
+        "legalTermsUri": {
+          "type": "string",
+          "description": "Lega terms of the product."
+        },
+        "privacyPolicyUri": {
+          "type": "string",
+          "description": "URI to the privacy policy of the product."
+        }
+      }
+    },
+    "DefinitionTemplates": {
+      "type": "object",
+      "description": "Encapsulation of UI definition file URI and deployment template file URIs.",
+      "properties": {
+        "uiDefinitionFileUri": {
+          "type": "string",
+          "description": "UI definition file URI."
+        },
+        "defaultDeploymentTemplateId": {
+          "type": "string",
+          "description": "Default deployment template ID."
+        },
+        "deploymentTemplateFileUris": {
+          "type": "object",
+          "description": "Dictionary containing the deployment template file IDs defined in the package manifest.",
+          "additionalProperties": {
+            "type": "string",
+            "description": "Properties of the deployment template file."
+          },
+          "readOnly": true
+        },
+        "deploymentFragmentFileUris": {
+          "type": "object",
+          "description": "Dictionary containing the deployment fragment file IDs defined in the package manifest.",
+          "additionalProperties": {
+            "type": "string",
+            "description": "Properties of the deployment fragment file."
+          },
+          "readOnly": true
+        }
+      }
+    },
+    "Image": {
+      "type": "object",
+      "description": "An image item.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "ID of the image."
+        },
+        "uri": {
+          "type": "string",
+          "description": "URI of the image."
+        },
+        "type": {
+          "type": "string",
+          "description": "Type of the image."
+        }
+      }
+    },
+    "OfferDetails": {
+      "type": "object",
+      "description": "Offer detail item read from the gallery item package.",
+      "properties": {
+        "publisherId": {
+          "type": "string",
+          "description": "The publisher ID."
+        },
+        "offerId": {
+          "type": "string",
+          "description": "The Offer ID."
+        },
+        "plans": {
+          "type": "array",
+          "description": "The plans available for the offer details.",
+          "items": {
+            "$ref": "#/definitions/Plan"
+          },
+          "readOnly": true
+        }
+      }
+    },
+    "Plan": {
+      "type": "object",
+      "description": "Plan item read from the gallery item package.",
+      "properties": {
+        "planId": {
+          "type": "string",
+          "description": "The plan id."
+        },
+        "displayName": {
+          "type": "string",
+          "description": "The display name of the plan."
+        },
+        "summary": {
+          "type": "string",
+          "description": "The summary of the plan."
+        },
+        "description": {
+          "type": "string",
+          "description": "The description of the plan."
         }
       }
     },
     "ResourcePlan": {
       "type": "object",
-      "description": "The reosurce plan object",
+      "description": "The resource plan object.",
       "properties": {
-        "Name": {
+        "name": {
           "type": "string",
-          "description": "The name of the plan",
+          "description": "The name of the plan.",
           "readOnly": true
         },
-        "Product": {
+        "product": {
           "type": "string",
-          "description": "The product code of the plan",
+          "description": "The product code of the plan.",
           "readOnly": true
         },
-        "PromotionCode": {
+        "promotionCode": {
           "type": "string",
-          "description": "The promotion code of the plan",
+          "description": "The promotion code of the plan.",
           "readOnly": true
         },
-        "Publisher": {
+        "publisher": {
           "type": "string",
-          "description": "The publisher of the plan",
+          "description": "The publisher of the plan.",
           "readOnly": true
         }
       }
     },
     "ResourceSku": {
       "type": "object",
-      "description": "The resource sku object",
+      "description": "The resource sku object.",
       "properties": {
-        "Name": {
+        "name": {
           "type": "string",
-          "description": "The name of the sku",
+          "description": "The name of the sku.",
           "readOnly": true
         },
-        "Tier": {
+        "tier": {
           "type": "string",
-          "description": "The tier of the sku",
+          "description": "The tier of the sku.",
           "readOnly": true
         },
-        "Size": {
+        "size": {
           "type": "string",
-          "description": "The size of the sku",
+          "description": "The size of the sku.",
           "readOnly": true
         },
-        "Family": {
+        "family": {
           "type": "string",
-          "description": "The family of the sku",
+          "description": "The family of the sku.",
           "readOnly": true
         },
-        "Capacity": {
+        "capacity": {
           "format": "int32",
           "type": "integer",
-          "description": "The capacity of the sku",
+          "description": "The capacity of the sku.",
           "readOnly": true
         }
       }
     },
     "ResourceDefinition": {
       "type": "object",
-      "description": "The resource definition object of the azure resource manager",
+      "description": "The resource definition object of the azure resource manager.",
       "properties": {
-        "Id": {
+        "id": {
           "type": "string",
-          "description": "The ID of the resource"
+          "description": "The ID of the resource."
         },
-        "Name": {
+        "name": {
           "type": "string",
-          "description": "The name of the resource",
+          "description": "The name of the resource.",
           "readOnly": true
         },
-        "Type": {
+        "type": {
           "type": "string",
-          "description": "The type of the resource",
+          "description": "The type of the resource.",
           "readOnly": true
         },
-        "Location": {
+        "location": {
           "type": "string",
-          "description": "The location of the resource"
+          "description": "The location of the resource."
         },
-        "Plan": {
+        "plan": {
           "$ref": "#/definitions/ResourcePlan",
-          "description": "The plan of the resource"
+          "description": "The plan of the resource."
         },
-        "Sku": {
+        "sku": {
           "$ref": "#/definitions/ResourceSku",
-          "description": "The sku of the resource"
+          "description": "The sku of the resource."
         },
-        "Kind": {
+        "kind": {
           "type": "string",
-          "description": "The kind of the resource"
+          "description": "The kind of the resource."
         },
-        "Tags": {
+        "tags": {
           "type": "object",
-          "description": "The tags on the resource",
+          "description": "The tags on the resource.",
           "additionalProperties": {
             "type": "string"
           }
         },
         "etag": {
           "type": "string",
-          "description": "The etag of the resource"
+          "description": "The etag of the resource."
         },
-        "Properties": {
+        "properties": {
           "type": "object",
-          "description": "The custom properties of the resource"
+          "description": "The custom properties of the resource.",
+          "x-ms-client-flatten": true
         }
       },
+      "required": [
+        "location",
+        "name"
+      ],
       "x-ms-azure-resource": true
+    },
+    "GalleryItemResource": {
+      "description": "Defines the gallery item as an azure resource manager resource.",
+      "allOf": [
+        {
+          "$ref": "#definitions/ResourceDefinition"
+        }
+      ],
+      "properties":{
+        "properties":{
+          "$ref": "#definitions/GalleryItem"
+        }
+      }
     }
   },
   "parameters": {
