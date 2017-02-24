@@ -696,11 +696,6 @@
         "etag": {
           "type": "string",
           "description": "The etag of the resource."
-        },
-        "properties": {
-          "type": "object",
-          "description": "The custom properties of the resource.",
-          "x-ms-client-flatten": true
         }
       },
       "required": [
