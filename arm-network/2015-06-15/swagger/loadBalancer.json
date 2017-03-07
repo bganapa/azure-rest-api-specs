@@ -97,7 +97,7 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "The name of the loadBalancer."
+            "description": "The name of the load balancer."
           },
           {
             "$ref": "#/parameters/ApiVersionParameter"

@@ -238,9 +238,7 @@
           "nextLinkName": "nextLink"
         }
       }
-    },
-
-
+    }
   },
   "definitions": {
     "NetworkInterfaceIPConfigurationPropertiesFormat": {
@@ -545,8 +543,8 @@
         }
       ],
       "description": "IPConfiguration"
-    },
-  }
+    }
+  },
  "parameters": {
     "SubscriptionIdParameter": {
       "name": "subscriptionId",
