@@ -1059,69 +1059,6 @@
         }
       ],
       "description": "UrlPathMaps give a url path to the backend mapping information for PathBasedRouting."
-    },
-    "AuthorizationPropertiesFormat": {
-      "properties": {
-        "authorizationKey": {
-          "type": "string",
-          "description": "Gets or sets the authorization key"
-        },
-        "authorizationUseStatus": {
-          "type": "string",
-          "description": "Gets or sets AuthorizationUseStatus",
-          "enum": [
-            "Available",
-            "InUse"
-          ],
-          "x-ms-enum": {
-            "name": "AuthorizationUseStatus",
-            "modelAsString": true
-          }
-        },
-        "provisioningState": {
-          "type": "string",
-          "description": "Gets or sets Provisioning state of the PublicIP resource Updating/Deleting/Failed"
-        }
-      }
-    },
-    "Resource": {
-      "properties": {
-        "id": {
-          "type": "string",
-          "description": "Resource Id"
-        },
-        "name": {
-          "readOnly": true,
-          "type": "string",
-          "description": "Resource name"
-        },
-        "type": {
-          "readOnly": true,
-          "type": "string",
-          "description": "Resource type"
-        },
-        "location": {
-          "type": "string",
-          "description": "Resource location"
-        },
-        "tags": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          },
-          "description": "Resource tags"
-        }
-      },
-      "x-ms-azure-resource": true
-    },
-    "SubResource": {
-      "properties": {
-        "id": {
-          "type": "string",
-          "description": "Resource Id"
-        }
-      },
-      "x-ms-azure-resource": true
     }
   },
   "parameters": {

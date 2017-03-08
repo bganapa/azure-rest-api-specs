@@ -49,7 +49,8 @@
         "message": {
           "type": "string"
         }
-      }
+      },
+      "description": "Error details properties"
     },
     "Error": {
       "properties": {
@@ -71,7 +72,8 @@
         "innerError": {
           "type": "string"
         }
-      }
+      },
+      "description": "Error object properties"
     },
     "AzureAsyncOperationResult": {
       "properties": {
@@ -98,7 +100,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource ID."
+          "description": "Resource Identifier."
         },
         "name": {
           "readOnly": true,
@@ -122,16 +124,18 @@
           "description": "Resource tags."
         }
       },
-      "x-ms-azure-resource": true
+      "x-ms-azure-resource": true,
+      "description": "Azure resource manager resource properties."
     },
     "SubResource": {
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource ID."
+          "description": "Resource Identifier."
         }
       },
-      "x-ms-azure-resource": true
+      "x-ms-azure-resource": true,
+      "description": "Azure resource manager sub resource properties."
     }
   },
   "parameters": {
