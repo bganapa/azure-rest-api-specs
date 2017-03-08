@@ -5,6 +5,7 @@
   },
   "documents": [
     "./2015-06-15/swagger/applicationGateway.json",
+    "./2015-06-15/swagger/checkDnsAvailability.json",
     "./2015-06-15/swagger/routeTable.json",
     "./2015-06-15/swagger/publicIpAddress.json",
     "./2015-06-15/swagger/networkSecurityGroup.json",
