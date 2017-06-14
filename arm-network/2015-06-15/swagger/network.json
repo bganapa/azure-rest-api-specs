@@ -5676,6 +5676,24 @@
       },
       "description": "AddressSpace contains an array of IP address ranges that can be used by subnets"
     },
+    "BgpSettings": {
+      "properties": {
+        "asn": {
+          "type": "integer",
+          "format": "int64",
+          "description": "Gets or sets this BGP speaker's ASN"
+        },
+        "bgpPeeringAddress": {
+          "type": "string",
+          "description": "Gets or sets the BGP peering address and BGP identifier of this BGP speaker"
+        },
+        "peerWeight": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Gets or sets the weight added to routes learned from this BGP speaker"
+        }
+      }
+    },
     "LocalNetworkGatewayPropertiesFormat": {
       "properties": {
         "localNetworkAddressSpace": {
@@ -5685,6 +5703,10 @@
         "gatewayIpAddress": {
           "type": "string",
           "description": "IP address of local network gateway."
+        },
+        "bgpSettings": {
+          "$ref": "#/definitions/BgpSettings",
+          "description": "Local network gateway's BGP speaker settings"
         },
         "resourceGuid": {
           "type": "string",
@@ -6755,6 +6777,10 @@
         "peer": {
           "$ref": "#/definitions/SubResource",
           "description": "The reference to peerings resource."
+        },
+        "enableBgp": {
+          "type": "boolean",
+          "description": "EnableBgp Flag"
         },
         "resourceGuid": {
           "type": "string",
