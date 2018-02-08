@@ -10,7 +10,7 @@
         "https"
     ],
     "paths": {
-        "/subscriptions/{subscriptionId}/providers/Microsoft.AzureBridge.Admin/products": {
+        "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/Microsoft.AzureBridge.Admin/activations/{activationName}/products": {
             "get": {
                 "x-ms-examples": {
                     "Return product name.": {
@@ -25,6 +25,12 @@
                 "parameters": [
                     {
                         "$ref": "AzureBridge.json#/parameters/SubscriptionIdParameter"
+                    },
+                    {
+                        "$ref": "AzureBridge.json#/parameters/ResourceGroupParameter"
+                    },
+                    {
+                        "$ref": "AzureBridge.json#/parameters/ActivationNameParameter"
                     },
                     {
                         "$ref": "AzureBridge.json#/parameters/ApiVersionParameter"
@@ -49,7 +55,7 @@
                 }
             }
         },
-        "/subscriptions/{subscriptionId}/providers/Microsoft.AzureBridge.Admin/products/{productName}": {
+        "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/Microsoft.AzureBridge.Admin/activations/{activationName}/products/{productName}": {
             "get": {
                 "x-ms-examples": {
                     "Return product name.": {
@@ -65,6 +71,12 @@
                     {
                         "$ref": "AzureBridge.json#/parameters/SubscriptionIdParameter"
                     },
+                    {
+                        "$ref": "AzureBridge.json#/parameters/ResourceGroupParameter"
+                    },
+                    {
+                        "$ref": "AzureBridge.json#/parameters/ActivationNameParameter"
+                    },                    
                     {
                         "$ref": "AzureBridge.json#/parameters/ProductNameParameter"
                     },
@@ -90,7 +102,53 @@
                     "application/json"
                 ]
             }
-        }
+        },
+        "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/Microsoft.AzureBridge.Admin/activations/default/products/{productName}/download": {
+            "post": {
+                "x-ms-examples": {
+                    "Return product name.": {
+                        "$ref": "./examples/Product/download.json"
+                    }
+                },
+                "description": "Downloads a product from azure marketplace.",
+                "tags": [
+                    "Products"
+                ],
+                "operationId": "Products_Download",
+                "parameters": [
+                    {
+                        "$ref": "AzureBridge.json#/parameters/SubscriptionIdParameter"
+                    },
+                    {
+                        "$ref": "AzureBridge.json#/parameters/ResourceGroupParameter"
+                    },
+                    {
+                        "$ref": "AzureBridge.json#/parameters/ActivationNameParameter"
+                    },                    
+                    {
+                        "$ref": "AzureBridge.json#/parameters/ProductNameParameter"
+                    },
+                    {
+                        "$ref": "AzureBridge.json#/parameters/ApiVersionParameter"
+                    }
+                ],
+                "responses": {
+                    "202": {
+                        "description": "Accepted"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }                    
+                },
+                "x-ms-long-running-operation": true,
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        }        
     },
     "definitions": {
         "ProductResource": {

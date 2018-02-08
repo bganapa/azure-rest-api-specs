@@ -101,8 +101,8 @@
                     "type": "string"
                 },
                 "iconUris": {
-                    "description": "Information about gallery icons. Deprecated.",
-                    "type": "string"
+                    "description": "Information about gallery icons.",
+                    "$ref": "#/definitions/GalleryIcons"
                 },
                 "payloadLength": {
                     "description": "Size in bytes.",
@@ -115,6 +115,42 @@
                 },
                 "productProperties": {
                     "description": "the product properties. At the moment only VirtualMachineProductProperties is allowed.",
+                    "$ref": "#/definitions/ProductProperties"
+                }
+            }
+        },
+        "GalleryIcons": {
+            "description": "Icons for the gallery items.",
+            "type": "object",
+            "properties": {
+                "hero": {
+                    "description": "The hero (815x290) icon relative path.",
+                    "type": "string"
+                },
+                "large": {
+                    "description": "The large (115x115) icon relative path.",
+                    "type": "string"
+                },
+                "wide": {
+                    "description": "The wide (255x115) icon relative path.",
+                    "type": "string"
+                },
+                "medium": {
+                    "description": "The medium (90x90) icon relative path.",
+                    "type": "string"
+                },
+                "small": {
+                    "description": "The small (40x40) icon relative path.",
+                    "type": "string"
+                }                                
+            }
+        },
+        "ProductProperties": {
+            "description": "Additional properties of the product",
+            "type": "object",
+            "properties": {
+                "version": {
+                    "description": "The version of the product",
                     "type": "string"
                 }
             }
@@ -171,6 +207,14 @@
             "description": "Name of the product.",
             "required": true,
             "type": "string",
+            "x-ms-parameter-location": "method"
+        },
+        "ResourceGroupParameter": {
+            "description": "The resource group the resource is located under.",
+            "name": "resourceGroup",
+            "in": "path",
+            "type": "string",
+            "required": true,
             "x-ms-parameter-location": "method"
         },
         "RegistrationNameParameter": {

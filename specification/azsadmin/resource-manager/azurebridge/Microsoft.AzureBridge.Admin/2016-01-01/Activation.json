@@ -10,14 +10,14 @@
         "https"
     ],
     "paths": {
-        "/subscriptions/{subscriptionId}/providers/Microsoft.AzureBridge.Admin/activations": {
+        "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/Microsoft.AzureBridge.Admin/activations": {
             "get": {
                 "x-ms-examples": {
                     "Return product name.": {
                         "$ref": "./examples/Activation/List.json"
                     }
                 },
-                "description": "Return product name.",
+                "description": "Returns the list of activations.",
                 "tags": [
                     "Activations"
                 ],
@@ -26,6 +26,9 @@
                     {
                         "$ref": "AzureBridge.json#/parameters/SubscriptionIdParameter"
                     },
+                    {
+                        "$ref": "AzureBridge.json#/parameters/ResourceGroupParameter"
+                    },                   
                     {
                         "$ref": "AzureBridge.json#/parameters/ApiVersionParameter"
                     }
@@ -49,14 +52,14 @@
                 }
             }
         },
-        "/subscriptions/{subscriptionId}/providers/Microsoft.AzureBridge.Admin/activations/{activationName}": {
+        "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/Microsoft.AzureBridge.Admin/activations/{activationName}": {
             "get": {
                 "x-ms-examples": {
                     "Return product name.": {
                         "$ref": "./examples/Activation/Get.json"
                     }
                 },
-                "description": "Return product name.",
+                "description": "Returns activation name.",
                 "tags": [
                     "Activations"
                 ],
@@ -65,6 +68,9 @@
                     {
                         "$ref": "AzureBridge.json#/parameters/SubscriptionIdParameter"
                     },
+                    {
+                        "$ref": "AzureBridge.json#/parameters/ResourceGroupParameter"
+                    },                   
                     {
                         "$ref": "AzureBridge.json#/parameters/ActivationNameParameter"
                     },
