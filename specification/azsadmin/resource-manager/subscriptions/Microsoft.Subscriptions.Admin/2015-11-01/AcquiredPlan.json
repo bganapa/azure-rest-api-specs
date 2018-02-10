@@ -186,7 +186,8 @@
                 ]
             }
         }
-    },
+    }
+   },
     "definitions": {
         "AcquiredPlan": {
             "description": "Represents the acquisition of an add-on plan for a subscription.",
@@ -322,5 +323,4 @@
             ]
         }
     ]
-  }
 }

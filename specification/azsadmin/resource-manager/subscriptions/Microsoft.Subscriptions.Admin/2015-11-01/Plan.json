@@ -182,6 +182,7 @@
                 "consumes": [
                     "application/json"
                 ]
+              }
             },
             "delete": {
                 "x-ms-examples": {
@@ -410,5 +411,4 @@
             ]
         }
     ]
-  }
 }

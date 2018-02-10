@@ -182,7 +182,8 @@
                 ]
             }
         }
-    },
+      }
+   },
     "definitions": {
         "DirectoryTenant": {
             "description": "Directory tenant.",
@@ -266,5 +267,4 @@
             ]
         }
     ]
-  }
 }

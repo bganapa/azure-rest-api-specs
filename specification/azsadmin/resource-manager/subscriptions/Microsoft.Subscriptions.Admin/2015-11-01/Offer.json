@@ -182,7 +182,8 @@
                 "consumes": [
                     "application/json"
                 ]
-            },
+            }
+           },
             "delete": {
                 "x-ms-examples": {
                     "Get the list of offers.": {
@@ -565,5 +566,4 @@
             ]
         }
     ]
-  }
 }

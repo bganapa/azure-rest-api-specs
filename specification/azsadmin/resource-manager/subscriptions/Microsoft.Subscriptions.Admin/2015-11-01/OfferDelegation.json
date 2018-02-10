@@ -194,6 +194,7 @@
                 ]
             }
         }
+      }
     },
     "definitions": {
         "DelegatedOffer": {
@@ -320,5 +321,4 @@
             ]
         }
     ]
-  }
 }
