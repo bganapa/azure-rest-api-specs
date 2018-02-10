@@ -92,7 +92,48 @@
             }
         }
     },
-    "definitions": {},
+    "definitions": {
+        "PlanProperties2": {
+            "description": "Properties of a plan.",
+            "type": "object",
+            "properties": {
+                "description": {
+                    "description": "Description of the plan.",
+                    "type": "string"
+                },
+                "displayName": {
+                    "description": "Display name.",
+                    "type": "string"
+                },
+                "externalReferenceId": {
+                    "description": "External reference identifier.",
+                    "type": "string"
+                },
+                "quotaIds": {
+                    "description": "Quota identifiers under the plan.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "name": {
+                    "description": "Name of the plan.",
+                    "type": "string"
+                },
+                "subscriptionCount": {
+                    "description": "Subscription count.",
+                    "type": "integer"
+                },
+                "skuIds": {
+                    "description": "SKU identifiers.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    },
     "parameters": {
         "NewDelegatedProviderParameter": {
             "description": "New reseller.",
