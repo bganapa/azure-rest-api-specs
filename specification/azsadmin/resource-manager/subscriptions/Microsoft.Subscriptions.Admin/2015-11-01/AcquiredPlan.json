@@ -125,8 +125,7 @@
                     "200": {
                         "description": "OK"
                     },
-                    "204":
-                    {
+                    "204": {
                         "description": "No Content"
                     }                   
                 },
@@ -177,16 +176,10 @@
                         "schema": {
                             "$ref": "#/definitions/AcquiredPlan"
                         }
-                },
-                "produces": [
-                    "application/json"
-                ],
-                "consumes": [
-                    "application/json"
-                ]
+                    }
+                }
             }
         }
-    }
    },
     "definitions": {
         "AcquiredPlan": {

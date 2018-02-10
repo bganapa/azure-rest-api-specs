@@ -216,13 +216,14 @@
                         "description": "Created",
                         "schema": {
                             "$ref": "#/definitions/Subscription"
-                        },
-                        "200": {
-                            "description": "OK",
-                            "schema": {
-                                "$ref": "#/definitions/Subscription"
-                            }
                         }
+                    },
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Subscription"
+                        }
+                      }
                     },
                     "produces": [
                         "application/json"
@@ -266,7 +267,6 @@
                     ]
                 }
             }
-          }
         },
         "definitions": {
             "Resource": {

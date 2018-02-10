@@ -168,7 +168,8 @@
                         "description": "Created",
                         "schema": {
                             "$ref": "#/definitions/Plan"
-                        },
+                        }
+                     },
                     "200": {
                         "description": "OK",
                         "schema": {
@@ -182,8 +183,7 @@
                 "consumes": [
                     "application/json"
                 ]
-              }
-            },
+              },
             "delete": {
                 "x-ms-examples": {
                     "Get the list of plans.": {

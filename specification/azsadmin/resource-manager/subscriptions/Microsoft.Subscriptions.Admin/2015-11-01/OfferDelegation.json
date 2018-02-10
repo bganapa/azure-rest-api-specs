@@ -138,7 +138,8 @@
                         "description": "Created",
                         "schema": {
                             "$ref": "#/definitions/DelegatedOffer"
-                        },
+                        }
+                    },
                     "200": {
                         "description": "OK",
                         "schema": {
@@ -194,7 +195,6 @@
                 ]
             }
         }
-      }
     },
     "definitions": {
         "DelegatedOffer": {
