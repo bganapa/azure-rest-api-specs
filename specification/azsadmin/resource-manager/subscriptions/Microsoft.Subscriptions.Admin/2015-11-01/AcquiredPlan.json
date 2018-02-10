@@ -10,7 +10,7 @@
         "https"
     ],
     "paths": {
-        "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/subscriptions/{targetSubscription}/acquiredPlans": {
+        "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/subscriptions/{targetSubscriptionId}/acquiredPlans": {
             "get": {
                 "x-ms-examples": {
                     "Get the list of usage aggregates for all tenants.": {
@@ -27,7 +27,7 @@
                         "$ref": "Subscriptions.json#/parameters/SubscriptionIdParameter"
                     },
                     {
-                        "$ref": "#/parameters/TargetSubscriptionParameter"
+                        "$ref": "#/parameters/TargetSubscriptionIdParameter"
                     },
                     {
                         "$ref": "Subscriptions.json#/parameters/ApiVersionParameter"
@@ -52,7 +52,7 @@
                 }
             }
         },
-        "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/subscriptions/{targetSubscription}/acquiredPlans/{plan}": {
+        "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/subscriptions/{targetSubscriptionId}/acquiredPlans/{plan}": {
             "get": {
                 "x-ms-examples": {
                     "Get the list of usage aggregates for all tenants.": {
@@ -69,7 +69,7 @@
                         "$ref": "Subscriptions.json#/parameters/SubscriptionIdParameter"
                     },
                     {
-                        "$ref": "#/parameters/TargetSubscriptionParameter"
+                        "$ref": "#/parameters/TargetSubscriptionIdParameter"
                     },
                     {
                         "$ref": "Subscriptions.json#/parameters/PlanParameter"
@@ -112,7 +112,7 @@
                         "$ref": "Subscriptions.json#/parameters/SubscriptionIdParameter"
                     },
                     {
-                        "$ref": "#/parameters/TargetSubscriptionParameter"
+                        "$ref": "#/parameters/TargetSubscriptionIdParameter"
                     },
                     {
                         "$ref": "Subscriptions.json#/parameters/PlanParameter"
@@ -125,7 +125,10 @@
                     "200": {
                         "description": "OK"
                     },
-                    204 No Content                    
+                    "204":
+                    {
+                        "description": "No Content"
+                    }                   
                 },
                 "produces": [
                     "application/json"
@@ -150,7 +153,7 @@
                         "$ref": "Subscriptions.json#/parameters/SubscriptionIdParameter"
                     },
                     {
-                        "$ref": "#/parameters/TargetSubscriptionParameter"
+                        "$ref": "#/parameters/TargetSubscriptionIdParameter"
                     },
                     {
                         "$ref": "Subscriptions.json#/parameters/PlanParameter"
@@ -282,7 +285,7 @@
         }
     },
     "parameters": {
-        "TargetSubscriptionParameter": {
+        "TargetSubscriptionIdParameter": {
             "name": "targetSubscription",
             "in": "path",
             "description": "The target subscription.",
@@ -306,7 +309,7 @@
             "type": "oauth2",
             "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
             "flow": "implicit",
-            "description": "Azure Active Directory OAuth2 Flow",
+            "description": "Authorization uses an Azure Active Directory OAuth2 flow.",
             "scopes": {
                 "user_impersonation": "impersonate your user account"
             }

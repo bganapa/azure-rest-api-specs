@@ -94,11 +94,11 @@
         "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/Microsoft.Subscriptions.Admin/offers/{offer}": {
             "get": {
                 "x-ms-examples": {
-                    "Get the list of offers.": {
+                    "Get the specified offer.": {
                         "$ref": "./examples/Offer/List.json"
                     }
                 },
-                "description": "Get the list of offers.",
+                "description": "Get the specified offer.",
                 "tags": [
                     "Offers"
                 ],
@@ -224,11 +224,11 @@
         "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/Microsoft.Subscriptions.Admin/offers/{offer}/Metrics": {
             "get": {
                 "x-ms-examples": {
-                    "Get subscription metrics.": {
+                    "Get the offer metrics.": {
                         "$ref": "./examples/Offer/Metrics.json"
                     }
                 },
-                "description": "Get subscription metrics.",
+                "description": "Get the offer metrics.",
                 "tags": [
                     "Offers"
                 ],
@@ -266,11 +266,11 @@
         "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/Microsoft.Subscriptions.Admin/offers/{offer}/MetricDefinitions": {
             "get": {
                 "x-ms-examples": {
-                    "Get the list of offers.": {
+                    "Get the metric definitions.": {
                         "$ref": "./examples/Offer/MetricDefinitions.json"
                     }
                 },
-                "description": "Get the list of offers.",
+                "description": "Get the metric definitions.",
                 "tags": [
                     "Offers"
                 ],
@@ -308,11 +308,11 @@
         "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/Microsoft.Subscriptions.Admin/offers/{offer}/link": {
             "post": {
                 "x-ms-examples": {
-                    "Get the list of offers.": {
+                    "Links a plan to an offer.": {
                         "$ref": "./examples/Offer/List.json"
                     }
                 },
-                "description": "Get the list of offers.",
+                "description": "Links a plan to an offer.",
                 "tags": [
                     "Offers"
                 ],
@@ -350,11 +350,11 @@
         "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/Microsoft.Subscriptions.Admin/offers/{offer}/unlink": {
             "post": {
                 "x-ms-examples": {
-                    "Get the list of offers.": {
+                    "Unlink a plan from an offer.": {
                         "$ref": "./examples/Offer/List.json"
                     }
                 },
-                "description": "Get the list of offers.",
+                "description": "Unlink a plan from an offer.",
                 "tags": [
                     "Offers"
                 ],
@@ -552,7 +552,7 @@
             "type": "oauth2",
             "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
             "flow": "implicit",
-            "description": "Azure Active Directory OAuth2 Flow",
+            "description": "Authorization uses an Azure Active Directory OAuth2 flow.",
             "scopes": {
                 "user_impersonation": "impersonate your user account"
             }
