@@ -41,8 +41,8 @@ input-file:
     - Microsoft.Subscriptions.Admin/2015-11-01/OfferDelegation.json
     - Microsoft.Subscriptions.Admin/2015-11-01/Plan.json
     - Microsoft.Subscriptions.Admin/2015-11-01/Quota.json
-    - Microsoft.Subscriptions.Admin/2015-11-01/Reseller.json
-    - Microsoft.Subscriptions.Admin/2015-11-01/ResellerOffer.json
+    - Microsoft.Subscriptions.Admin/2015-11-01/DelegatedProvider.json
+    - Microsoft.Subscriptions.Admin/2015-11-01/DelegatedProviderOffer.json
 ```
 
 ---
