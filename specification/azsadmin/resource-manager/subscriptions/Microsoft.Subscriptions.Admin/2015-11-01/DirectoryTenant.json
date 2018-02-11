@@ -55,7 +55,7 @@
         "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/Microsoft.Subscriptions.Admin/directoryTenants/{tenant}": {
             "get": {
                 "x-ms-examples": {
-                    "Get the list of usage aggregates for all tenants.": {
+                    "Get a directory tenant by name.": {
                         "$ref": "./examples/DirectoryTenant/Get.json"
                     }
                 },
@@ -98,7 +98,7 @@
             },
             "delete": {
                 "x-ms-examples": {
-                    "Get the list of usage aggregates for all tenants.": {
+                    "Delete a directory tenant under a resource group.": {
                         "$ref": "./examples/DirectoryTenant/Delete.json"
                     }
                 },
@@ -124,7 +124,10 @@
                 "responses": {
                     "200": {
                         "description": "OK"
-                    }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    }                   
                 },
                 "produces": [
                     "application/json"
@@ -135,11 +138,11 @@
             },
             "put": {
                 "x-ms-examples": {
-                    "Get the list of usage aggregates for all tenants.": {
+                    "Create or updates a directory tenant.": {
                         "$ref": "./examples/DirectoryTenant/Create.json"
                     }
                 },
-                "description": "Gets a collection of SubscriberUsageAggregates, which are UsageAggregates from direct tenants.",
+                "description": "Create or updates a directory tenant.",
                 "tags": [
                     "DirectoryTenants"
                 ],

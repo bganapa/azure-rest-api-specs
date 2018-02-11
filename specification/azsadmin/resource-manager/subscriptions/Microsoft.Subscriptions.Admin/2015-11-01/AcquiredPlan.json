@@ -13,11 +13,11 @@
         "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/subscriptions/{targetSubscriptionId}/acquiredPlans": {
             "get": {
                 "x-ms-examples": {
-                    "Get the list of usage aggregates for all tenants.": {
+                    "Get a collection of all acquired plans that subscription has access to..": {
                         "$ref": "examples/AcquiredPlan/List.json"
                     }
                 },
-                "description": "Gets a collection of SubscriberUsageAggregates, which are UsageAggregates from direct tenants.",
+                "description": "Get a collection of all acquired plans that subscription has access to.",
                 "tags": [
                     "AcquiredPlans"
                 ],
@@ -55,7 +55,7 @@
         "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/subscriptions/{targetSubscriptionId}/acquiredPlans/{plan}": {
             "get": {
                 "x-ms-examples": {
-                    "Get the list of usage aggregates for all tenants.": {
+                    "Get the specifed acquired plan.": {
                         "$ref": "examples/AcquiredPlan/Get.json"
                     }
                 },
@@ -98,11 +98,11 @@
             },
             "delete": {
                 "x-ms-examples": {
-                    "Get the list of usage aggregates for all tenants.": {
+                    "Deletes an acquired plan.": {
                         "$ref": "./examples/AcquiredPlan/Delete.json"
                     }
                 },
-                "description": "Gets a collection of SubscriberUsageAggregates, which are UsageAggregates from direct tenants.",
+                "description": "Deletes an acquired plan.",
                 "tags": [
                     "AcquiredPlans"
                 ],
@@ -226,7 +226,7 @@
             }
         },
         "ProvisioningState": {
-            "description": "Provisioning state for subscriptions service resources e.g. resource provider registration.",
+            "description": "Provisioning state for subscriptions service resources, for example, resource provider registration.",
             "type": "string",
             "enum": [
                 "NotSpecified",

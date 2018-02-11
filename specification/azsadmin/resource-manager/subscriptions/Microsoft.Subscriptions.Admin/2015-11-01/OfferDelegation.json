@@ -13,11 +13,11 @@
         "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/Microsoft.Subscriptions.Admin/offers/{offer}/offerDelegations": {
             "get": {
                 "x-ms-examples": {
-                    "Get the list of offers.": {
+                    "Get the list of delegated offers.": {
                         "$ref": "./examples/OfferDelegation/List.json"
                     }
                 },
-                "description": "Get the list of offers.",
+                "description": "Get the list of delegated offers.",
                 "tags": [
                     "OfferDelegations"
                 ],
@@ -156,7 +156,7 @@
             },
             "delete": {
                 "x-ms-examples": {
-                    "Get the list of offers.": {
+                    "Delete the .": {
                         "$ref": "./examples/OfferDelegation/Delete.json"
                     }
                 },
@@ -185,7 +185,10 @@
                 "responses": {
                     "200": {
                         "description": "OK"
-                    }
+                    },
+                    "204": {
+                        "description": "No Content"
+                    }                   
                 },
                 "produces": [
                     "application/json"
@@ -224,8 +227,8 @@
                         "type": "string"
                     }
                 },
-                "resellerSubscriptionId": {
-                    "description": "Identifier of the reseller subscription that delegated the offer.",
+                "DelegatedProviderSubscriptionId": {
+                    "description": "Identifier of the DelegatedProvider subscription that delegated the offer.",
                     "type": "string"
                 },
                 "offerName": {
@@ -244,20 +247,20 @@
                     "description": "Resource group name of the base admin offer.",
                     "type": "string"
                 },
-                "resellerOfferName": {
-                    "description": "Name of the base reseller offer (when the reseller is not the admin subscription).",
+                "DelegatedProviderOfferName": {
+                    "description": "Name of the base DelegatedProvider offer (when the DelegatedProvider is not the admin subscription).",
                     "type": "string"
                 },
-                "resellerOfferDisplayName": {
-                    "description": "Display name of the base reseller offer (when the reseller is not the admin subscription).",
+                "DelegatedProviderOfferDisplayName": {
+                    "description": "Display name of the base DelegatedProvider offer (when the DelegatedProvider is not the admin subscription).",
                     "type": "string"
                 },
-                "resellerOfferDescription": {
-                    "description": "Description of the base reseller offer (when the reseller is not the admin subscription).",
+                "DelegatedProviderOfferDescription": {
+                    "description": "Description of the base DelegatedProvider offer (when the DelegatedProvider is not the admin subscription).",
                     "type": "string"
                 },
-                "resellerOfferResourceGroupName": {
-                    "description": "Resource group name of the base reseller offer (when the reseller is not the admin subscription).",
+                "DelegatedProviderOfferResourceGroupName": {
+                    "description": "Resource group name of the base DelegatedProvider offer (when the DelegatedProvider is not the admin subscription).",
                     "type": "string"
                 },
                 "subscriptionId": {
@@ -267,7 +270,7 @@
             }
         },
         "DelegatedOfferList": {
-            "description": "Holds an array of usage aggregates and the continuation token.",
+            "description": ".",
             "properties": {
                 "value": {
                     "description": "Array of usage aggregates.",

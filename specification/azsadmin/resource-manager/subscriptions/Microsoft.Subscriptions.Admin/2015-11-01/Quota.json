@@ -100,11 +100,11 @@
     },
     "definitions": {
         "Quota": {
-            "description": "Quotas for resellers.",
+            "description": "Quotas for DelegatedProviders.",
             "type": "object",
             "properties": {
                 "properties": {
-                    "description": "Quotas for resellers.",
+                    "description": "Quotas for DelegatedProviders.",
                     "x-ms-client-flatten": true,
                     "$ref": "#/definitions/QuotaProperties"
                 }
@@ -116,7 +116,7 @@
             ]
         },
         "QuotaProperties": {
-            "description": "Quotas for resellers.",
+            "description": "Quotas for DelegatedProviders.",
             "type": "object",
             "properties": {
                 "allowCustomPortalBranding": {
