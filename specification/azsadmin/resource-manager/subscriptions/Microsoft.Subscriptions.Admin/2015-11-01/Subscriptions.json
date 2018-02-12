@@ -159,7 +159,7 @@
                 "tags": [
                     "Subscriptions"
                 ],
-                "operationId": "Subscriptions_List",
+                "operationId": "Subscriptions_CheckNameAvailability",
                 "parameters": [
                     {
                         "$ref": "#/parameters/SubscriptionIdParameter"
@@ -403,7 +403,7 @@
                     }
                 }
             },
-            "CheckNameAvailabilityParameter":{
+            "CheckNameAvailabilityDefinition":{
                 "description": "The check name availability action definition.",
                 "type": "object",
                 "properties": {
@@ -421,7 +421,7 @@
                 "description": "The check name availability response definition",
                 "type": "object",
                 "properties": {
-                    "nameAvailablename": {
+                    "nameAvailable": {
                         "description": "A value indicating whether the name is available.",
                         "type": "boolean"
                     },
@@ -503,6 +503,7 @@
                 "properties": {
                     "value": {
                         "type": "array",
+                        "description": "Subscription definition.",
                         "items": {
                             "$ref": "#/definitions/Subscription"
                         }
@@ -858,7 +859,17 @@
                 "required": true,
                 "type": "string",
                 "x-ms-parameter-location": "method"
-            }
+            },
+            "CheckNameAvailabilityParameter": {
+                "description": "Check name availability parameter",
+                "name": "offer",
+                "in": "body",
+                "schema": {
+                    "$ref": "#/definitions/CheckNameAvailabilityDefinition"
+                },                
+                "required": true,
+                "x-ms-parameter-location": "method"
+            }            
         },
         "securityDefinitions": {
             "azure_auth": {

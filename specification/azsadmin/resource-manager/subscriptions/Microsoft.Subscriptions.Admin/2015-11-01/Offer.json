@@ -457,6 +457,7 @@
         },
         "AccessibilityState": {
             "type": "string",
+            "description": "Represents the state of the offer",
             "enum": [
                 "Private",
                 "Public",

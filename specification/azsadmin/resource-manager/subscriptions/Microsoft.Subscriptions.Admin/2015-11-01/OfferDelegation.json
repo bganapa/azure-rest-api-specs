@@ -227,7 +227,7 @@
                         "type": "string"
                     }
                 },
-                "DelegatedProviderSubscriptionId": {
+                "delegatedProviderSubscriptionId": {
                     "description": "Identifier of the DelegatedProvider subscription that delegated the offer.",
                     "type": "string"
                 },
@@ -247,19 +247,19 @@
                     "description": "Resource group name of the base admin offer.",
                     "type": "string"
                 },
-                "DelegatedProviderOfferName": {
+                "delegatedProviderOfferName": {
                     "description": "Name of the base DelegatedProvider offer (when the DelegatedProvider is not the admin subscription).",
                     "type": "string"
                 },
-                "DelegatedProviderOfferDisplayName": {
+                "delegatedProviderOfferDisplayName": {
                     "description": "Display name of the base DelegatedProvider offer (when the DelegatedProvider is not the admin subscription).",
                     "type": "string"
                 },
-                "DelegatedProviderOfferDescription": {
+                "delegatedProviderOfferDescription": {
                     "description": "Description of the base DelegatedProvider offer (when the DelegatedProvider is not the admin subscription).",
                     "type": "string"
                 },
-                "DelegatedProviderOfferResourceGroupName": {
+                "delegatedProviderOfferResourceGroupName": {
                     "description": "Resource group name of the base DelegatedProvider offer (when the DelegatedProvider is not the admin subscription).",
                     "type": "string"
                 },
