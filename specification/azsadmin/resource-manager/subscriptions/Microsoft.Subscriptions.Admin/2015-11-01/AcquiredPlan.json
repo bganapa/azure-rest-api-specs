@@ -48,7 +48,7 @@
                     "application/json"
                 ],
                 "x-ms-pageable": {
-                    "nextLinkName": null
+                    "nextLinkName": "nextLink"
                 }
             }
         },
@@ -191,12 +191,7 @@
                     "x-ms-client-flatten": true,
                     "$ref": "#/definitions/PlanAcquisitionProperties"
                 }
-            },
-            "allOf": [
-                {
-                    "$ref": "Subscriptions.json#/definitions/Resource"
-                }
-            ]
+            }
         },
         "PlanAcquisitionProperties": {
             "description": "Represents the acquisition of an add-on plan for a subscription.",
