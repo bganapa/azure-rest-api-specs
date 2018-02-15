@@ -246,7 +246,7 @@
     "parameters": {
         "OfferDelegationParameter": {
             "description": "Name of a offer delegation.",
-            "name": "offerDelegation",
+            "name": "offerDelegationName",
             "in": "path",
             "required": true,
             "type": "string",
