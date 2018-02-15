@@ -339,6 +339,10 @@
                     "description": "Display name.",
                     "type": "string"
                 },
+                "name": {
+                    "description": "Display name.",
+                    "type": "string"
+                },
                 "externalReferenceId": {
                     "description": "External reference identifier.",
                     "type": "string"
