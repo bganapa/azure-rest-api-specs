@@ -37,7 +37,7 @@
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/AcquiredPlanList"
+                            "$ref": "#/definitions/PlanAcquisitionList"
                         }
                     }
                 },
@@ -52,7 +52,7 @@
                 }
             }
         },
-        "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/subscriptions/{targetSubscriptionId}/acquiredPlans/{plan}": {
+        "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/subscriptions/{targetSubscriptionId}/acquiredPlans/{planAcquisitionId}": {
             "get": {
                 "x-ms-examples": {
                     "Get the specifed acquired plan.": {
@@ -72,7 +72,7 @@
                         "$ref": "#/parameters/TargetSubscriptionIdParameter"
                     },
                     {
-                        "$ref": "Subscriptions.json#/parameters/PlanParameter"
+                        "$ref": "#/parameters/PlanAcquisitionIdParameter"
                     },
                     {
                         "$ref": "Subscriptions.json#/parameters/ApiVersionParameter"
@@ -82,7 +82,7 @@
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/AcquiredPlan"
+                            "$ref": "#/definitions/PlanAcquisition"
                         }
                     },
                     "404": {
@@ -115,7 +115,7 @@
                         "$ref": "#/parameters/TargetSubscriptionIdParameter"
                     },
                     {
-                        "$ref": "Subscriptions.json#/parameters/PlanParameter"
+                        "$ref": "#/parameters/PlanAcquisitionIdParameter"
                     },
                     {
                         "$ref": "Subscriptions.json#/parameters/ApiVersionParameter"
@@ -155,7 +155,7 @@
                         "$ref": "#/parameters/TargetSubscriptionIdParameter"
                     },
                     {
-                        "$ref": "Subscriptions.json#/parameters/PlanParameter"
+                        "$ref": "#/parameters/PlanAcquisitionIdParameter"
                     },
                     {
                         "$ref": "Subscriptions.json#/parameters/ApiVersionParameter"
@@ -168,13 +168,13 @@
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/AcquiredPlan"
+                            "$ref": "#/definitions/PlanAcquisition"
                         }
                     },
                     "201": {
                         "description": "Created",
                         "schema": {
-                            "$ref": "#/definitions/AcquiredPlan"
+                            "$ref": "#/definitions/PlanAcquisition"
                         }
                     }
                 }
@@ -182,14 +182,14 @@
         }
    },
     "definitions": {
-        "AcquiredPlan": {
+        "PlanAcquisition": {
             "description": "Represents the acquisition of an add-on plan for a subscription.",
             "type": "object",
             "properties": {
                 "properties": {
                     "description": "Represents the acquisition of an add-on plan for a subscription.",
                     "x-ms-client-flatten": true,
-                    "$ref": "#/definitions/AcquiredPlanProperties"
+                    "$ref": "#/definitions/PlanAcquisitionProperties"
                 }
             },
             "allOf": [
@@ -198,7 +198,7 @@
                 }
             ]
         },
-        "AcquiredPlanProperties": {
+        "PlanAcquisitionProperties": {
             "description": "Represents the acquisition of an add-on plan for a subscription.",
             "type": "object",
             "properties": {
@@ -261,14 +261,14 @@
                 ]
             }
         },
-        "AcquiredPlanList": {
+        "PlanAcquisitionList": {
             "description": "List of acquired plans.",
             "properties": {
                 "value": {
                     "description": "List of acquired plans.",
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/AcquiredPlan"
+                        "$ref": "#/definitions/PlanAcquisition"
                     }
                 },
                 "nextLink": {
@@ -287,6 +287,14 @@
             "type": "string",
             "x-ms-parameter-location": "method"
         },
+        "PlanAcquisitionIdParameter": {
+            "name": "planAcquisitionId",
+            "in": "path",
+            "description": "The plan acquisition Identifier",
+            "required": true,
+            "type": "string",
+            "x-ms-parameter-location": "method"
+        },        
         "NewAcquiredPlanParameter": {
             "name": "newAcquiredPlan",
             "in": "body",
