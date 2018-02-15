@@ -317,6 +317,7 @@
             "properties": {
                 "properties": {
                     "description": "Properties of a plan.",
+                    "x-ms-client-flatten": true,
                     "$ref": "#/definitions/PlanProperties"
                 }
             },
@@ -348,6 +349,10 @@
                     "items": {
                         "type": "string"
                     }
+                },
+                "name": {
+                    "description": "Name of the plan.",
+                    "type": "string"
                 },
                 "subscriptionCount": {
                     "description": "Subscription count.",
