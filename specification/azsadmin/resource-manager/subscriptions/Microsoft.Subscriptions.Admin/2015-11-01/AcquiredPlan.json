@@ -280,9 +280,9 @@
     },
     "parameters": {
         "TargetSubscriptionIdParameter": {
-            "name": "targetSubscription",
+            "name": "targetSubscriptionId",
             "in": "path",
-            "description": "The target subscription.",
+            "description": "The target subscription ID.",
             "required": true,
             "type": "string",
             "x-ms-parameter-location": "method"
