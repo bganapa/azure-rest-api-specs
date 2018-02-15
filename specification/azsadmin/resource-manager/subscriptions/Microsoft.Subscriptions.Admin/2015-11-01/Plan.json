@@ -317,7 +317,6 @@
             "properties": {
                 "properties": {
                     "description": "Properties of a plan.",
-                    "x-ms-client-flatten": true,
                     "$ref": "#/definitions/PlanProperties"
                 }
             },
