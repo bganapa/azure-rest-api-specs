@@ -201,6 +201,10 @@
                     "description": "Acquisition identifier.",
                     "type": "string"
                 },
+                "id": {
+                    "description": "Identifier in the tenant subscription context.",
+                    "type": "string"
+                },
                 "planId": {
                     "description": "Plan identifier in the tenant subscription context.",
                     "type": "string"
