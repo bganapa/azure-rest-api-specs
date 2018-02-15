@@ -127,6 +127,9 @@
                     },
                     {
                         "$ref": "#/parameters/ApiVersionParameter"
+                    },
+                    {
+                        "$ref": "#/parameters/FilterParameter"
                     }
                 ],
                 "responses": {
@@ -145,7 +148,8 @@
                 ],
                 "x-ms-pageable": {
                     "nextLinkName": null
-                }
+                },
+                "x-ms-odata": "#/definitions/Subscription"
             }
         },
         "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/checkNameAvailability": {
@@ -869,7 +873,14 @@
                 },                
                 "required": true,
                 "x-ms-parameter-location": "method"
-            }            
+            },
+            "FilterParameter": {
+                "description": "OData filter parameter.",
+                "name": "$filter",
+                "in": "query",
+                "type": "string",
+                "x-ms-parameter-location": "method"
+            }
         },
         "securityDefinitions": {
             "azure_auth": {
