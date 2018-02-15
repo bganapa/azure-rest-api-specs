@@ -353,10 +353,6 @@
                         "type": "string"
                     }
                 },
-                "name": {
-                    "description": "Name of the plan.",
-                    "type": "string"
-                },
                 "subscriptionCount": {
                     "description": "Subscription count.",
                     "type": "integer"
