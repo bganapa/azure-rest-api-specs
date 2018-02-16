@@ -404,7 +404,12 @@
                     "description": "Represents an offering of services against which a subscription can be created.",
                     "$ref": "#/definitions/OfferProperties"
                 }
-            }
+            },
+            "allOf": [
+                {
+                    "$ref": "Subscriptions.json#/definitions/Resource"
+                }
+            ]
         },
         "OfferProperties": {
             "description": "Represents an offering of services against which a subscription can be created.",
