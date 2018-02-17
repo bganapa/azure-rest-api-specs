@@ -46,7 +46,7 @@
                 }
             }
         },
-        "/subscriptions/{subscriptionid}": {
+        "/subscriptions/{subscriptionId}": {
             "get": {
                 "x-ms-examples": {
                     "Subscriptions ": {
