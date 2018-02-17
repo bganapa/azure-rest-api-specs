@@ -48,38 +48,31 @@
         },
         "/subscriptions/{subscriptionId}": {
             "get": {
-                "x-ms-examples": {
-                    "Subscriptions ": {
-                        "$ref": "./examples/Subscriptions/Get.json"
-                    }
+              "tags": [
+                "Subscriptions"
+              ],
+              "operationId": "Subscriptions_Get",
+              "description": "Gets details about particular subscription.",
+              "parameters": [
+                {
+                  "name": "subscriptionId",
+                  "in": "path",
+                  "required": true,
+                  "type": "string",
+                  "description": "Id of the subscription."
                 },
-                "description": "Get a specified subscription.",
-                "tags": [
-                    "Subscriptions"
-                ],
-                "operationId": "Subscriptions_Get",
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/SubscriptionIdParameter"
-                    },
-                    {
-                        "$ref": "#/parameters/ApiVersionParameter"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "404": {
-                        "description": "NOT FOUND"
-                    }
-                },
-                "produces": [
-                    "application/json"
-                ],
-                "consumes": [
-                    "application/json"
-                ]
+                {
+                  "$ref": "#/parameters/ApiVersionParameter"
+                }
+              ],
+              "responses": {
+                "200": {
+                  "description": "",
+                  "schema": {
+                    "$ref": "#/definitions/Subscription"
+                  }
+                }
+              }
             },
             "put": {
                 "x-ms-examples": {
