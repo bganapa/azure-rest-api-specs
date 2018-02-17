@@ -10,7 +10,7 @@
         "https"
     ],
     "paths": {
-        "/providers/Microsoft.Subscriptions/subscriptions": {
+        "/subscriptions": {
             "get": {
                 "x-ms-examples": {
                     "Get the list of subscriptions.": {
@@ -46,7 +46,7 @@
                 }
             }
         },
-        "/providers/Microsoft.Subscriptions/subscriptions/{subscriptionid}": {
+        "/subscriptions/{subscriptionid}": {
             "get": {
                 "x-ms-examples": {
                     "Subscriptions ": {
