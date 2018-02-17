@@ -10,7 +10,7 @@
         "https"
     ],
     "paths": {
-        "/delegatedProviders/{providerId}/offers": {
+        "/delegatedProviders/{delegatedProviderId}/offers": {
             "get": {
                 "x-ms-examples": {
                     "Get the list of offers.": {
@@ -24,7 +24,7 @@
                 "operationId": "DelegatedProviderOffers_List",
                 "parameters": [
                     {
-                        "name": "providerId",
+                        "name": "delegatedProviderId",
                         "in": "path",
                         "required": true,
                         "type": "string",
@@ -64,7 +64,7 @@
                 "tags": [
                     "DelegatedProviderOffers"
                 ],
-                "operationId": "DelegatedProviderOffers_List",
+                "operationId": "DelegatedProviderOffers_GET",
                 "parameters": [
                     {
                         "name": "delegatedProviderId",
