@@ -21,8 +21,8 @@ To see additional help and options, run:
 These are the global settings for the Subscriptions API.
 
 ``` yaml
-title: SubscriptionsAdminClient
-description: Subscriptions Admin Client
+title: SubscriptionsManagementClient
+description: Subscriptions Management Client
 openapi-type: arm
 tag: package-2015-11-01
 ```
@@ -46,9 +46,9 @@ input-file:
 csharp:
   azure-arm: true
   license-header: MICROSOFT_MIT_NO_VERSION
-  namespace: Microsoft.AzureStack.Management.Subscriptions.Admin
+  namespace: Microsoft.AzureStack.Management.Subscriptions
   payload-flattening-threshold: 1
-  output-folder: $(csharp-sdks-folder)/Subscriptions/Subscriptions.Admin/Generated
+  output-folder: $(csharp-sdks-folder)/Subscriptions/Subscriptions/Generated
   clear-output-folder: true
 ```
 
@@ -69,5 +69,5 @@ python:
 These settings apply only when `--tag=package-2015-11-01 --python` is specified on the command line.
 
 ``` yaml $(tag) == 'package-2015-11-01' && $(python)
-namespace: azure.mgmt.subscriptions.admin.v2015_06_01_preview
+namespace: azure.mgmt.subscriptions.v2015_06_01_preview
 ```

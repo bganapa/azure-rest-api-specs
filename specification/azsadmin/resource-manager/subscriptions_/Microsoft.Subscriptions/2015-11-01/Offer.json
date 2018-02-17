@@ -3,9 +3,9 @@
     "info": {
         "version": "2015-11-01",
         "title": "SubscriptionsManagementClient",
-        "description": "The Admin Subscriptions Management Client."
+        "description": "The User Subscriptions Management Client."
     },
-    "host": "adminmanagement.local.azurestack.external",
+    "host": "management.local.azurestack.external",
     "schemes": [
         "https"
     ],
