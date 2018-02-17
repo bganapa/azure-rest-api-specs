@@ -10,21 +10,25 @@
         "https"
     ],
     "paths": {
-        "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions/offers": {
+        "/delegatedProviders/{providerId}/offers": {
             "get": {
                 "x-ms-examples": {
                     "Get the list of offers.": {
                         "$ref": "./examples/DelegatedProviderOffer/List.json"
                     }
                 },
-                "description": "Get the list of public offers.",
+                "description": "Get the list of offers for the specified delegated provider.",
                 "tags": [
                     "DelegatedProviderOffers"
                 ],
                 "operationId": "DelegatedProviderOffers_ListAll",
                 "parameters": [
                     {
-                        "$ref": "Subscriptions.json#/parameters/SubscriptionIdParameter"
+                        "name": "providerId",
+                        "in": "path",
+                        "required": true,
+                        "type": "string",
+                        "description": "Id of the delegated provider."
                     },
                     {
                         "$ref": "Subscriptions.json#/parameters/ApiVersionParameter"
@@ -34,7 +38,7 @@
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/DelegatedProviderOfferList"
+                            "$ref": "#/definitions/OfferList"
                         }
                     }
                 },
@@ -49,22 +53,19 @@
                 }
             }
         },
-        "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions/offers/{offerName}": {
+        "/offers": {
             "get": {
                 "x-ms-examples": {
-                    "Get the specified public offer.": {
-                        "$ref": "./examples/DelegatedProviderOffer/Get.json"
+                    "Get the list of offers.": {
+                        "$ref": "./examples/Offer/List.json"
                     }
                 },
-                "description": "Get the specified public offer.",
+                "description": "Get the list of public offers.",
                 "tags": [
-                    "DelegatedProviderOffers"
+                    "Offers"
                 ],
-                "operationId": "DelegatedProviderOffers_Get",
+                "operationId": "Offers_ListAll",
                 "parameters": [
-                    {
-                        "$ref": "Subscriptions.json#/parameters/SubscriptionIdParameter"
-                    },
                     {
                         "$ref": "Subscriptions.json#/parameters/ApiVersionParameter"
                     }
@@ -73,11 +74,8 @@
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/DelegatedProviderOffer"
+                            "$ref": "#/definitions/OfferList"
                         }
-                    },
-                    "404": {
-                        "description": "NOT FOUND"
                     }
                 },
                 "produces": [
@@ -87,20 +85,20 @@
                     "application/json"
                 ],
                 "x-ms-pageable": {
-                    "nextLinkName": null
+                    "nextLinkName": "nextLink"
                 }
             }
-        }      
+        }   
     },
     "definitions": {
-        "DelegatedProviderOfferResource": {
+        "OfferResource": {
             "description": "Represents an offering of services against which a subscription can be created.",
             "type": "object",
             "properties": {
                 "properties": {
                     "x-ms-client-flatten": true,
                     "description": "Represents an offering of services against which a subscription can be created.",
-                    "$ref": "#/definitions/DelegatedProviderOffer"
+                    "$ref": "#/definitions/Offer"
                 }
             },
             "allOf": [
@@ -109,7 +107,7 @@
                 }
             ]
         },
-        "DelegatedProviderOffer": {
+        "Offer": {
             "description": "Represents an offering of services against which a subscription can be created.",
             "type": "object",
             "properties": {
@@ -131,7 +129,7 @@
                 }
             }
         },
-        "DelegatedProviderOfferList": {
+        "OfferList": {
             "description": "List of public offers.",
             "type": "object",
             "properties": {
@@ -139,7 +137,7 @@
                     "description": "List of public offers.",
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/DelegatedProviderOffer"
+                        "$ref": "#/definitions/Offer"
                     }
                 },
                 "nextLink": {
