@@ -64,7 +64,7 @@
                 "tags": [
                     "DelegatedProviderOffers"
                 ],
-                "operationId": "DelegatedProviderOffers_GET",
+                "operationId": "DelegatedProviderOffers_Get",
                 "parameters": [
                     {
                         "name": "delegatedProviderId",
