@@ -57,7 +57,7 @@
             "get": {
                 "x-ms-examples": {
                     "Get the list of offers.": {
-                        "$ref": "./examples/DelegatedProviderOffer/List.json"
+                        "$ref": "./examples/DelegatedProviderOffer/Get.json"
                     }
                 },
                 "description": "Get the list of offers for the specified delegated provider.",
