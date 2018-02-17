@@ -21,7 +21,7 @@
                 "tags": [
                     "DelegatedProviderOffers"
                 ],
-                "operationId": "DelegatedProviderOffers_ListAll",
+                "operationId": "DelegatedProviderOffers_List",
                 "parameters": [
                     {
                         "name": "providerId",
@@ -64,7 +64,7 @@
                 "tags": [
                     "Offers"
                 ],
-                "operationId": "Offers_ListAll",
+                "operationId": "Offers_List",
                 "parameters": [
                     {
                         "$ref": "Subscriptions.json#/parameters/ApiVersionParameter"
