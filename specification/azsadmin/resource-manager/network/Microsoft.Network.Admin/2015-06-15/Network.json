@@ -68,7 +68,7 @@
                     "readOnly": true
                 },
                 "location": {
-                    "description": "Region Location of resource.",
+                    "description": "Region location of resource.",
                     "type": "string",
                     "readOnly": true
                 },
@@ -91,7 +91,7 @@
                     "type": "string"
                 },
                 "subscriptionId": {
-                    "description": "The subscription Id.",
+                    "description": "The subscription ID.",
                     "type": "string"
                 },
                 "tenantResourceUri": {
@@ -136,7 +136,7 @@
                     "$ref": "#/definitions/AdminOverviewResourceHealth"
                 },
                 "virtualGatewayHealth": {
-                    "description": "Health for all Gateways as reported by the NC.",
+                    "description": "Health for all gateways as reported by the NC.",
                     "$ref": "#/definitions/AdminOverviewResourceHealth"
                 },
                 "publicIpAddressUsage": {
@@ -148,7 +148,7 @@
                     "$ref": "#/definitions/AdminOverviewResourceUsage"
                 },
                 "macAddressUsage": {
-                    "description": "Total MAC Address usage as reported by the NC.",
+                    "description": "Total MAC address usage as reported by the NC.",
                     "$ref": "#/definitions/AdminOverviewResourceUsage"
                 }
             }
@@ -177,7 +177,7 @@
                     "format": "int64"
                 },
                 "healthUnknownCount": {
-                    "description": "number of resources in an unknown state.",
+                    "description": "Number of resources in an unknown state.",
                     "type": "integer",
                     "format": "int64"
                 }
@@ -203,14 +203,14 @@
         "SubscriptionIdParameter": {
             "name": "subscriptionId",
             "in": "path",
-            "description": "Subscription credentials which uniquely identify Microsoft Azure subscription.The subscription ID forms part of the URI for every service call.",
+            "description": "Subscription credentials which uniquely identify Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.",
             "required": true,
             "type": "string"
         },
         "ApiVersionParameter": {
             "name": "api-version",
             "in": "query",
-            "description": "Client Api Version.",
+            "description": "Client API Version.",
             "required": true,
             "type": "string",
             "default": "2015-06-15"
@@ -272,7 +272,7 @@
             "type": "oauth2",
             "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
             "flow": "implicit",
-            "description": "Azure Active Directory OAuth2 Flow",
+            "description": "Authorization uses an Azure Active Directory OAuth2 flow.",
             "scopes": {
                 "user_impersonation": "impersonate your user account"
             }

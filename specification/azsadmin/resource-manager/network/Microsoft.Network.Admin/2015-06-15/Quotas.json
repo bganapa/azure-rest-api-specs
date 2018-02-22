@@ -200,27 +200,27 @@
             "description": "Properties of a quota.",
             "properties": {
                 "maxPublicIpsPerSubscription": {
-                    "description": "Maximum number of Public IP Addresses a tenant subscription can provision.",
+                    "description": "Maximum number of public IP addresses a tenant subscription can provision.",
                     "type": "integer",
                     "format": "int64"
                 },
                 "maxVnetsPerSubscription": {
-                    "description": "Maximum number of Virtual Networks a tenant subscription can provision.",
+                    "description": "Maximum number of virtual networks a tenant subscription can provision.",
                     "type": "integer",
                     "format": "int64"
                 },
                 "maxVirtualNetworkGatewaysPerSubscription": {
-                    "description": "Maximum number of Virtual Network Gateways a tenant subscription can provision.",
+                    "description": "Maximum number of virtual network gateways a tenant subscription can provision.",
                     "type": "integer",
                     "format": "int64"
                 },
                 "maxVirtualNetworkGatewayConnectionsPerSubscription": {
-                    "description": "Maximum number of Virtual Network Gateway Connections a tenant subscription can provision.",
+                    "description": "Maximum number of virtual network gateway Connections a tenant subscription can provision.",
                     "type": "integer",
                     "format": "int64"
                 },
                 "maxLoadBalancersPerSubscription": {
-                    "description": "Maximum number of Load Balancers a tenant subscription can provision.",
+                    "description": "Maximum number of load balancers a tenant subscription can provision.",
                     "type": "integer",
                     "format": "int64"
                 },
@@ -230,12 +230,12 @@
                     "format": "int64"
                 },
                 "maxSecurityGroupsPerSubscription": {
-                    "description": "Maximum number of Security Groups a tenant subscription can provision.",
+                    "description": "Maximum number of security groups a tenant subscription can provision.",
                     "type": "integer",
                     "format": "int64"
                 },
                 "migrationPhase": {
-                    "description": "State of migration such as None, Prepare, Commit and Abort.",
+                    "description": "State of migration such as None, Prepare, Commit, and Abort.",
                     "$ref": "#/definitions/MigrationPhase"
                 }
             }
@@ -258,7 +258,7 @@
             }
         },
         "MigrationPhase": {
-            "description": "State of migration such as None, Prepare, Commit and Abort.",
+            "description": "State of migration such as None, Prepare, Commit, and Abort.",
             "enum": [
                 "None",
                 "Prepare",
@@ -289,7 +289,7 @@
             "type": "oauth2",
             "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
             "flow": "implicit",
-            "description": "Azure Active Directory OAuth2 Flow",
+            "description": "Authorization uses an Azure Active Directory OAuth2 flow.",
             "scopes": {
                 "user_impersonation": "impersonate your user account"
             }
