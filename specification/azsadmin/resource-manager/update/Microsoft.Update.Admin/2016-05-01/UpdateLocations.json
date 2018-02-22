@@ -111,11 +111,11 @@
       "type": "object",
       "properties": {
         "currentVersion": {
-          "description": "Current version of your AzureStack deployment.",
+          "description": "Current version of your Azure Stack deployment.",
           "type": "string"
         },
         "currentOemVersion": {
-          "description": "Current OEM version of your AzureStack deployment.",
+          "description": "Current OEM version of your Azure Stack deployment.",
           "type": "string"
         },
         "lastUpdated": {
@@ -130,7 +130,7 @@
       }
     },
     "RegionUpdateState": {
-      "description": "State of the region in regard to update.",
+      "description": "State of the region in regard to the update.",
       "type": "string",
       "enum": [
         "Unknown",
@@ -177,7 +177,7 @@
       "type": "oauth2",
       "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
       "flow": "implicit",
-      "description": "Azure Active Directory OAuth2 Flow",
+      "description": "Authorization uses an Azure Active Directory OAuth2 flow.",
       "scopes": {
         "user_impersonation": "impersonate your user account"
       }

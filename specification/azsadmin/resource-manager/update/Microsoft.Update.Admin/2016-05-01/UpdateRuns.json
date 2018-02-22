@@ -220,12 +220,12 @@
           "type": "string"
         },
         "startTimeUtc": {
-          "description": "Time at which this step started executing",
+          "description": "Time at which this step started running.",
           "type": "string",
           "format": "date-time"
         },
         "endTimeUtc": {
-          "description": "Time at which this step stopped executing",
+          "description": "Time at which this step stopped executing.",
           "type": "string",
           "format": "date-time"
         },
@@ -268,7 +268,7 @@
       "type": "oauth2",
       "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
       "flow": "implicit",
-      "description": "Azure Active Directory OAuth2 Flow",
+      "description": "Authorization uses an Azure Active Directory OAuth2 flow.",
       "scopes": {
         "user_impersonation": "impersonate your user account"
       }
