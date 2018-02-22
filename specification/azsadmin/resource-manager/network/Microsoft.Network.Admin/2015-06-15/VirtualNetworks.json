@@ -19,7 +19,7 @@
         "/subscriptions/{subscriptionId}/providers/Microsoft.Network.Admin/adminVirtualNetworks": {
             "get": {
                 "x-ms-examples": {
-                    "List of all virtual networks": {
+                    "List of all virtual networks.": {
                         "$ref": "./examples/VirtualNetworks/List.json"
                     }
                 },
@@ -68,11 +68,11 @@
     },
     "definitions": {
         "VirtualNetwork": {
-            "description": "This represents a Virtual Network.",
+            "description": "This represents a virtual network.",
             "type": "object",
             "properties": {
                 "properties": {
-                    "description": "Properties of a Virtual Network.",
+                    "description": "Properties of a virtual network.",
                     "x-ms-client-flatten": true,
                     "$ref": "#/definitions/VirtualNetworkProperties"
                 }
@@ -84,17 +84,17 @@
             ]
         },
         "VirtualNetworkProperties": {
-            "description": "Properties of a Virtual Network.",
+            "description": "Properties of a virtual network.",
             "type": "object",
             "properties": {
                 "configurationState": {
-                    "description": "The Virtual Network configuration state.",
+                    "description": "The virtual network configuration state.",
                     "$ref": "#/definitions/VirtualNetworkConfigurationState"
                 }
             }
         },
         "VirtualNetworkConfigurationState": {
-            "description": "Virtual Network configuration state.",
+            "description": "The virtual network configuration state.",
             "type": "object",
             "properties": {
                 "status": {
@@ -135,11 +135,11 @@
             }
         },
         "VirtualNetworkConfigurationStatus": {
-            "description": "Virtual Network configuration status.",
+            "description": "Virtual network configuration status.",
             "type": "object",
             "properties": {
                 "status": {
-                    "description": "The Virtual Network configuration status.",
+                    "description": "The virtual network configuration status.",
                     "enum": [
                         "Failure",
                         "Warning",
@@ -186,7 +186,7 @@
             "type": "oauth2",
             "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
             "flow": "implicit",
-            "description": "Azure Active Directory OAuth2 Flow",
+            "description": "Authorization uses an Azure Active Directory OAuth2 flow.",
             "scopes": {
                 "user_impersonation": "impersonate your user account"
             }
