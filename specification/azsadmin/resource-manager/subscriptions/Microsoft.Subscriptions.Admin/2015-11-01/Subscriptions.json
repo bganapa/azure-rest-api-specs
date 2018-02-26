@@ -866,7 +866,7 @@
             },
             "CheckNameAvailabilityParameter": {
                 "description": "Check name availability parameter",
-                "name": "offer",
+                "name": "nameAvailabilityDefinition",
                 "in": "body",
                 "schema": {
                     "$ref": "#/definitions/CheckNameAvailabilityDefinition"
