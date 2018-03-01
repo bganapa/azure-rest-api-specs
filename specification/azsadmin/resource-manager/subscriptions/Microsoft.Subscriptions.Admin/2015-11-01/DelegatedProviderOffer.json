@@ -27,7 +27,7 @@
                         "$ref": "Subscriptions.json#/parameters/SubscriptionIdParameter"
                     },
                     {
-                        "$ref": "Subscriptions.json#/parameters/delegatedProviderSubscriptionIdParameter"
+                        "$ref": "Subscriptions.json#/parameters/DelegatedProviderSubscriptionIdParameter"
                     },
                     {
                         "$ref": "Subscriptions.json#/parameters/ApiVersionParameter"
@@ -69,7 +69,7 @@
                         "$ref": "Subscriptions.json#/parameters/SubscriptionIdParameter"
                     },
                     {
-                        "$ref": "Subscriptions.json#/parameters/delegatedProviderSubscriptionIdParameter"
+                        "$ref": "Subscriptions.json#/parameters/DelegatedProviderSubscriptionIdParameter"
                     },
                     {
                         "$ref": "Subscriptions.json#/parameters/OfferParameter"
