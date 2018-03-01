@@ -539,7 +539,9 @@
                     "Warned",
                     "PastDue",
                     "Disabled",
-                    "Deleted"
+                    "Deleted",
+                    "Deleting",
+                    "PartiallyDeleted"
                 ],
                 "x-ms-enum": {
                     "name": "SubscriptionState",
