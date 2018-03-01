@@ -866,6 +866,14 @@
                 "type": "string",
                 "x-ms-parameter-location": "method"
             },
+            "DelegatedProviderSubscriptionIdParameter": {
+                "description": "Delegated provider subscription identifier.",
+                "name": "delegatedProviderSubscriptionId",
+                "in": "path",
+                "required": true,
+                "type": "string",
+                "x-ms-parameter-location": "method"
+            },
             "CheckNameAvailabilityParameter": {
                 "description": "Check name availability parameter",
                 "name": "nameAvailabilityDefinition",
