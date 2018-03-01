@@ -10,7 +10,7 @@
         "https"
     ],
     "paths": {
-        "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/delegatedProviders/{delegatedProvider}/offers": {
+        "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/delegatedProviders/{delegatedProviderSubscriptionId}/offers": {
             "get": {
                 "x-ms-examples": {
                     "Get the list of delegated provider offers.": {
@@ -27,7 +27,7 @@
                         "$ref": "Subscriptions.json#/parameters/SubscriptionIdParameter"
                     },
                     {
-                        "$ref": "Subscriptions.json#/parameters/DelegatedProviderParameter"
+                        "$ref": "Subscriptions.json#/parameters/delegatedProviderSubscriptionIdParameter"
                     },
                     {
                         "$ref": "Subscriptions.json#/parameters/ApiVersionParameter"
@@ -52,7 +52,7 @@
                 }
             }
         },
-        "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/delegatedProviders/{delegatedProvider}/offers/{offer}": {
+        "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/delegatedProviders/{delegatedProviderSubscriptionId}/offers/{offer}": {
             "get": {
                 "x-ms-examples": {
                     "Get the specified delegated provider offer.": {
@@ -69,7 +69,7 @@
                         "$ref": "Subscriptions.json#/parameters/SubscriptionIdParameter"
                     },
                     {
-                        "$ref": "Subscriptions.json#/parameters/DelegatedProviderParameter"
+                        "$ref": "Subscriptions.json#/parameters/delegatedProviderSubscriptionIdParameter"
                     },
                     {
                         "$ref": "Subscriptions.json#/parameters/OfferParameter"
@@ -168,6 +168,14 @@
         "DelegatedProviderOfferParameter": {
             "description": "The delegated offer name",
             "name": "delegatedProviderOffer",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "x-ms-parameter-location": "method"
+        },
+        "DelegatedProviderSubscriptionIdParameter": {
+            "description": "Delegated provider subscription identifier.",
+            "name": "delegatedProviderSubscriptionId",
             "in": "path",
             "required": true,
             "type": "string",
