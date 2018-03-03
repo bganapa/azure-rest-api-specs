@@ -238,7 +238,7 @@
                         "$ref": "./examples/Subscriptions/List.json"
                     }
                 },
-                "description": "Get the list of subscriptions.",
+                "description": "Creates a new subscription.",
                 "tags": [
                     "Subscriptions"
                 ],
@@ -495,12 +495,7 @@
                         "description": "Directory tenant identifier.",
                         "type": "string"
                     }
-                },
-                "allOf": [
-                    {
-                        "$ref": "#/definitions/Resource"
-                    }
-                ]
+                }
             },
             "SubscriptionList": {
                 "description": "List of subscriptions.",
