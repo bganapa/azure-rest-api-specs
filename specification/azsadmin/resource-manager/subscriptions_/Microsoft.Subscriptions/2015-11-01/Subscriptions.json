@@ -224,12 +224,7 @@
                         "description": "Directory tenant identifier.",
                         "type": "string"
                     }
-                },
-                "allOf": [
-                    {
-                        "$ref": "#/definitions/Resource"
-                    }
-                ]
+                }
             },
             "SubscriptionList": {
                 "description": "List of subscriptions.",
