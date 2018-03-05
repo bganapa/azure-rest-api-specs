@@ -805,7 +805,7 @@
             },
             "ResourceGroupParameter": {
                 "description": "The resource group the resource is located under.",
-                "name": "resourceGroup",
+                "name": "resourceGroupName",
                 "in": "path",
                 "type": "string",
                 "required": true,
