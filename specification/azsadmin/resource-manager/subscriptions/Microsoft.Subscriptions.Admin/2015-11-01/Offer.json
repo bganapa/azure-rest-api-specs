@@ -520,7 +520,25 @@
                 }
             }
         },
-        "PlanLink": {
+        "PlanLinkDefinition": {
+            "description": "Definition for linking and unlinking plans to offers.",
+            "type": "object",
+            "properties": {
+                "planName": {
+                    "description": "Name of the plan.",
+                    "type": "string"
+                },
+                "planLinkType": {
+                    "description": "Type of the plan link.",
+                    "$ref": "#/definitions/PlanLinkType"
+                },
+                "maxAcquisitionCount": {
+                    "description": "The maximum acquisition count by subscribers",
+                    "type": "integer"
+                }
+            }            
+        },
+        "PlanLinkType": {
             "description": "Plan link type.",
             "type": "string",
             "enum": [
@@ -529,7 +547,7 @@
                 "Addon"
             ],
             "x-ms-enum": {
-                "name": "PlanLink",
+                "name": "PlanLinkType",
                 "modelAsString": true
             }
         }
@@ -551,7 +569,7 @@
             "in": "body",
             "required": true,
             "schema": {
-                "$ref": "#/definitions/PlanLink"
+                "$ref": "#/definitions/PlanLinkDefinition"
             },
             "x-ms-parameter-location": "method"
         }
