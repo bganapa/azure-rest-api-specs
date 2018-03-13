@@ -289,7 +289,7 @@
             "description": "The new acquired plan.",
             "required": true,
             "schema": {
-                "$ref": "#/definitions/PlanAcquisitionProperties"
+                "$ref": "#/definitions/PlanAcquisition"
             },
             "x-ms-parameter-location": "method"
         }
