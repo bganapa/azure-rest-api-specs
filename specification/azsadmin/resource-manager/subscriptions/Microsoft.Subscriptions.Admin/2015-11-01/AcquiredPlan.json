@@ -186,17 +186,6 @@
             "description": "Represents the acquisition of an add-on plan for a subscription.",
             "type": "object",
             "properties": {
-                "properties": {
-                    "description": "Represents the acquisition of an add-on plan for a subscription.",
-                    "x-ms-client-flatten": true,
-                    "$ref": "#/definitions/PlanAcquisitionProperties"
-                }
-            }
-        },
-        "PlanAcquisitionProperties": {
-            "description": "Represents the acquisition of an add-on plan for a subscription.",
-            "type": "object",
-            "properties": {
                 "acquisitionId": {
                     "description": "Acquisition identifier.",
                     "type": "string"
