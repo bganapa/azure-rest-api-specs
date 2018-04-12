@@ -28,7 +28,7 @@
                 "properties": {
                     "name": "testplans",
                     "displayName": "testplans",
-                    "description": "testplans",
+                    "description": "test plan",
                     "subscriptionCount": 0,
                     "quotaIds": [
                         "/subscriptions/8ab2551d-41e5-489b-9273-1cdf1cbc7dc6/providers/Microsoft.Subscriptions.Admin/locations/local/quotas/delegatedProviderQuota"
@@ -45,7 +45,7 @@
                 "properties": {
                     "name": "testplans",
                     "displayName": "testplans",
-                    "description": "testplans",
+                    "description": "test plan",
                     "subscriptionCount": 0,
                     "quotaIds": [
                         "/subscriptions/8ab2551d-41e5-489b-9273-1cdf1cbc7dc6/providers/Microsoft.Subscriptions.Admin/locations/local/quotas/delegatedProviderQuota"
