@@ -94,7 +94,7 @@
                 "tags": [
                     "Locations"
                 ],
-                "operationId": "Locations_Update",
+                "operationId": "Locations_CreateOrUpdate",
                 "parameters": [
                     {
                         "$ref": "Subscriptions.json#/parameters/SubscriptionIdParameter"
