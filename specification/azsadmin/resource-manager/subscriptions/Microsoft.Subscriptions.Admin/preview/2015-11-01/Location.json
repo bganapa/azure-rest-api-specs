@@ -93,7 +93,7 @@
             "put": {
                 "x-ms-examples": {
                     "Get the list of usage aggregates for all tenants.": {
-                        "$ref": "./examples/Location/put.json"
+                        "$ref": "./examples/Location/Put.json"
                     }
                 },
                 "description": "Updates the specified location.",
@@ -136,7 +136,7 @@
             "delete": {
                 "x-ms-examples": {
                     "Get the list of usage aggregates for all tenants.": {
-                        "$ref": "./examples/Location/delete.json"
+                        "$ref": "./examples/Location/Delete.json"
                     }
                 },
                 "description": "Deletes the specified location.",
