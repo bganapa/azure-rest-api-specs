@@ -87,7 +87,7 @@
             "put": {
                 "x-ms-examples": {
                     "Updates the specified location.": {
-                        "$ref": "./examples/Location/put.json"
+                        "$ref": "./examples/Location/Put.json"
                     }
                 },
                 "description": "Updates the specified location.",
