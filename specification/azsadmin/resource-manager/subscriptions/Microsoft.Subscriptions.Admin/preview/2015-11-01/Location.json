@@ -19,7 +19,7 @@
         "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/locations": {
             "get": {
                 "x-ms-examples": {
-                    "Get the list of usage aggregates for all tenants.": {
+                    "Get a list of all AzureStack location.": {
                         "$ref": "./examples/Location/List.json"
                     }
                 },
@@ -52,7 +52,7 @@
         "/subscriptions/{subscriptionId}/providers/Microsoft.Subscriptions.Admin/locations/{location}": {
             "get": {
                 "x-ms-examples": {
-                    "Get the list of usage aggregates for all tenants.": {
+                    "Get the specified location.": {
                         "$ref": "./examples/Location/Get.json"
                     }
                 },
@@ -86,7 +86,7 @@
             },
             "put": {
                 "x-ms-examples": {
-                    "Get the list of usage aggregates for all tenants.": {
+                    "Updates the specified location.": {
                         "$ref": "./examples/Location/put.json"
                     }
                 },
@@ -123,8 +123,8 @@
             },
             "delete": {
                 "x-ms-examples": {
-                    "Get the list of usage aggregates for all tenants.": {
-                        "$ref": "./examples/Location/delete.json"
+                    "Deletes the specified location.": {
+                        "$ref": "./examples/Location/Delete.json"
                     }
                 },
                 "description": "Deletes the specified location.",

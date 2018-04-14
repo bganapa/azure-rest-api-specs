@@ -716,10 +716,10 @@
             }
         },
         "MetricList": {
-            "description": "Holds an array of usage aggregates and the continuation token.",
+            "description": "List of metrics.",
             "properties": {
                 "value": {
-                    "description": "Array of usage aggregates.",
+                    "description": "List of metrics.",
                     "type": "array",
                     "items": {
                         "$ref": "#/definitions/Metric"
@@ -732,10 +732,10 @@
             }
         },
         "MetricDefinitionList": {
-            "description": "Holds an array of usage aggregates and the continuation token.",
+            "description": "List of metric definitions.",
             "properties": {
                 "value": {
-                    "description": "Array of usage aggregates.",
+                    "description": "Array of metric definitions.",
                     "type": "array",
                     "items": {
                         "$ref": "#/definitions/MetricDefinition"

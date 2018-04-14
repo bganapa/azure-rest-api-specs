@@ -329,10 +329,10 @@
             }
         },
         "PlanList": {
-            "description": "Holds an array of usage aggregates and the continuation token.",
+            "description": "List of plans",
             "properties": {
                 "value": {
-                    "description": "Array of usage aggregates.",
+                    "description": "Array of plans.",
                     "type": "array",
                     "items": {
                         "$ref": "#/definitions/Plan"

@@ -139,10 +139,10 @@
             }
         },
         "DelegatedProviderOfferList": {
-            "description": "Holds an array of usage aggregates and the continuation token.",
+            "description": "List of delegated provider offers.",
             "properties": {
                 "value": {
-                    "description": "Array of usage aggregates.",
+                    "description": "Array of delegated provider offers.",
                     "type": "array",
                     "items": {
                         "$ref": "#/definitions/DelegatedProviderOffer"
