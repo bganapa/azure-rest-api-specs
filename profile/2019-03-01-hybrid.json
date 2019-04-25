@@ -40,7 +40,6 @@
             ],
             "2017-03-30": [
                 "disks",
-                "locations/diskoperations",
                 "snapshots"
             ]
         },
@@ -149,7 +148,6 @@
             ],
             "2016-08-01": [
                 "metadata",
-                "sites/extensions",
                 "sites/metricDefinitions",
                 "sites/metrics",
                 "sites/recommendations",
