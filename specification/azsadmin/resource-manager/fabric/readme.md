@@ -157,9 +157,6 @@ input-file:
   - $(this-folder)/Microsoft.Fabric.Admin/preview/2016-05-01/InfraRoleInstance.json
   - $(this-folder)/Microsoft.Fabric.Admin/preview/2016-05-01/IpPool.json
   - $(this-folder)/Microsoft.Fabric.Admin/preview/2016-05-01/LogicalNetwork.json
-  - $(this-folder)/Microsoft.Fabric.Admin/preview/2016-05-01/StoragePool.json
-  - $(this-folder)/Microsoft.Fabric.Admin/preview/2016-05-01/StorageSystem.json
-  - $(this-folder)/Microsoft.Fabric.Admin/preview/2016-05-01/Volume.json
   - $(this-folder)/Microsoft.Fabric.Admin/preview/2016-05-01/LogicalSubnet.json
   - $(this-folder)/Microsoft.Fabric.Admin/preview/2016-05-01/MacAddressPool.json
   - $(this-folder)/Microsoft.Fabric.Admin/preview/2016-05-01/NetworkOperationResults.json
@@ -167,9 +164,7 @@ input-file:
   - $(this-folder)/Microsoft.Fabric.Admin/preview/2016-05-01/ScaleUnitNode.json
   - $(this-folder)/Microsoft.Fabric.Admin/preview/2016-05-01/SlbMuxInstance.json
   - $(this-folder)/Microsoft.Fabric.Admin/preview/2016-05-01/StorageOperationResults.json
-  - $(this-folder)/Microsoft.Fabric.Admin/preview/2018-10-01/Drive.json
   - $(this-folder)/Microsoft.Fabric.Admin/preview/2018-10-01/StorageSubSystem.json
-  - $(this-folder)/Microsoft.Fabric.Admin/preview/2018-10-01/Volume.json
   - $(this-folder)/Microsoft.Fabric.Admin/preview/2019-05-01/Drive.json
   - $(this-folder)/Microsoft.Fabric.Admin/preview/2019-05-01/Volume.json
 
